@@ -1,6 +1,6 @@
 document.write(`
     <div class="counter">
-        Updated: 07/09/2023&nbsp;&nbsp;|&nbsp;&nbsp;7828 links indexed.
+        Updated: 08/09/2023&nbsp;&nbsp;|&nbsp;&nbsp;7827 links indexed.
     </div>
     <br>
 `);
