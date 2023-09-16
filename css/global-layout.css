@@ -1,0 +1,97 @@
+/* Global CSS file used only for the layout applied to the different pages of the website */
+
+html, body {
+    background-color: #1C1C1C;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    width: auto;
+}
+
+nav.navbar {
+    text-align: center;
+    border: 1px solid #7200FF;
+    background-color: #555;
+    font-size: 20px;
+}
+nav.navbar > ul {
+    /* Reset default list styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* Reset default list styles */
+    display: inline-block;
+}
+nav.navbar > ul > li {
+    display: inline;
+}
+nav.navbar > ul > li.navbar-item-active {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #13A10E;
+}
+nav.navbar > ul > li.navbar-item-active a {
+    text-decoration: underline solid 1px;
+    border: 1px solid #7200FF;
+    margin: -1px -1px -1px -1px;
+}
+nav.navbar > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    color: #FFFFFF;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+nav.navbar > ul > li > a:hover {
+    background-color: #000000;
+    color: #7200FF;
+    border: 1px solid #7200FF;
+    margin: -1px;
+    text-decoration: underline solid 1px;
+    transition: background-color 0.3s;
+}
+nav.navbar > ul > li > a > .navbar-item-text {
+    padding-left: 5px;
+}
+
+footer {
+    text-align: center;
+    border-top: thin solid #808080;
+    font-size: 16px;
+    color: #808080;
+    padding: 15px;
+    padding-bottom: 10px;
+}
+footer img {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: -8px auto 4px;
+    padding: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+a:link {
+    color: #61B2FF;
+}
+a:visited  {
+    color: #61B2FF;
+}
+a:hover {
+    color: #7200FF;
+}
+
+.text {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+
+@media screen and (max-width: 1000px) {
+    footer {
+        font-size: 15px;
+    }
+}

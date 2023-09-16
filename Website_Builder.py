@@ -136,20 +136,21 @@ def write_html_header() -> None:
                 <title>IS Bookmarks - Illegal Services</title>
                 <link rel="shortcut icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
                 <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
-                <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
+                <link rel="stylesheet" href="/Illegal_Services/css/global-layout.css">
+                <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
                 <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
             </head>
 
             <body>
-                <nav>
-                    <div class="navbar">
-                        <a href="/Illegal_Services/index.html"><i class="fa fa-home"></i><span class="navbar-text-padding">Home</span></a>
-                        <a href="/Illegal_Services/credits.html"><i class="fa fa-handshake-o"></i><span class="navbar-text-padding">Credits</span></a>
-                        <a href="/Illegal_Services/tutorial.html"><i class="fa fa-life-ring"></i><span class="navbar-text-padding">Tutorial</span></a>
-                        <a href="/Illegal_Services/faq.html"><i class="fa fa-question-circle"></i><span class="navbar-text-padding">FAQ</span></a>
-                        <a href="/Illegal_Services/downloads.html"><i class="fa fa-cloud-download"></i><span class="navbar-text-padding">Downloads</span></a>
-                        <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html" class="navbar-active"><i class="fa fa-bookmark-o"></i><span class="navbar-text-padding"><u>IS Bookmarks</u></span></a>
-                    </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="/Illegal_Services/index.html"><i class="fa fa-home"></i><span class="navbar-item-text">Home</span></a></li>
+                        <li><a href="/Illegal_Services/credits.html"><i class="fa fa-handshake-o"></i><span class="navbar-item-text">Credits</span></a></li>
+                        <li><a href="/Illegal_Services/tutorial.html"><i class="fa fa-life-ring"></i><span class="navbar-item-text">Tutorial</span></a></li>
+                        <li><a href="/Illegal_Services/faq.html"><i class="fa fa-question-circle"></i><span class="navbar-item-text">FAQ</span></a></li>
+                        <li><a href="/Illegal_Services/downloads.html"><i class="fa fa-cloud-download"></i><span class="navbar-item-text">Downloads</span></a></li>
+                        <li class="navbar-item-active"><a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html"><i class="fa fa-bookmark-o"></i><span class="navbar-item-text">IS Bookmarks</span></a></li>
+                    </ul>
                 </nav>
 
                 <div class="search-or-request_parent">
@@ -182,7 +183,6 @@ def write_html_header() -> None:
                 <div class="pathbar">
                     {display_pathbar}
                 </div>
-                <br>
 
                 <div class="vertical-menu">
         """
@@ -202,7 +202,6 @@ def write_footer() -> None:
     with open(windows_href_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
         text = """
                 </div>
-                <br>
 
                 <script src="/Illegal_Services/js/counter.js"></script>
                 <noscript>
@@ -304,7 +303,7 @@ for bookmark in bookmarks_db:
 
         match = re.search(r"^(.*)( \| \(untrusted(?:\: .*))$", bookmark_link_title)
         if match:
-            bookmark_link_title__html_text = f'{match.group(1)}<span style="color: red">{match.group(2)}</span>'
+            bookmark_link_title__html_text = f'{match.group(1)}<span style="color: #ff0000">{match.group(2)}</span>'
         else:
             bookmark_link_title__html_text = bookmark_link_title__text
 
@@ -329,9 +328,8 @@ for bookmark in bookmarks_db:
             exit(0)
 
     elif bookmark_type == "HR":
-        #bookmark_hr = str(parts[3]) # this code, not correctly implemented in "bookmarks_parser.py" (expected: "--------------------" instead of --------------------)
         with open(bookmark_path__windows_index_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
-            file.write("        <HR>\n")
+            file.write("        <hr>\n")
             file.close()
         if not (bookmark_path__windows_index_path__path.exists() and bookmark_path__windows_index_path__path.is_file()):
             print(f'ERROR (WRITE_HR_INDEX): "{bookmark_path__windows_index_path__str}"')
@@ -360,7 +358,6 @@ with open("js\counter.js", "w", encoding="utf-8") as file:
             <div class="counter">
                 Updated: {datetime.date.today().strftime("%d/%m/%Y")}&nbsp;&nbsp;|&nbsp;&nbsp;{links_counter} links indexed.
             </div>
-            <br>
         `);
     """
     text = textwrap.dedent(text).removeprefix("\n")

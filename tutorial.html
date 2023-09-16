@@ -10,81 +10,67 @@
     <title>Illegal Services</title>
     <link rel="shortcut icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
+    <link rel="stylesheet" href="/Illegal_Services/css/global-layout.css">
+    <link rel="stylesheet" href="/Illegal_Services/css/tutorial.css">
     <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
-    <style>
-        ul {
-            padding-left: 0;
-        }
-
-        ul li {
-            list-style-position: inside;
-            font-size: 25px;
-        }
-
-        ul li u:hover{
-            color: #7200FF;
-        }
-
-        .hr-centered {
-            margin-left: 21%;
-            margin-right: 21%;
-            border-top: 3px solid black;
-        }
-      </style>
 </head>
 
 <body>
-    <nav>
-        <div class="navbar">
-            <a href="/Illegal_Services/index.html"><i class="fa fa-home"></i><span class="navbar-text-padding">Home</span></a>
-            <a href="/Illegal_Services/credits.html"><i class="fa fa-handshake-o"></i><span class="navbar-text-padding">Credits</span></a>
-            <a href="/Illegal_Services/tutorial.html" class="navbar-active"><i class="fa fa-life-ring"></i><span class="navbar-text-padding"><u>Tutorial</u></span></a>
-            <a href="/Illegal_Services/faq.html"><i class="fa fa-question-circle"></i><span class="navbar-text-padding">FAQ</span></a>
-            <a href="/Illegal_Services/downloads.html"><i class="fa fa-cloud-download"></i><span class="navbar-text-padding">Downloads</span></a>
-            <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html"><i class="fa fa-bookmark-o"></i><span class="navbar-text-padding">IS Bookmarks</span></a>
-        </div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/Illegal_Services/index.html"><i class="fa fa-home"></i><span class="navbar-item-text">Home</span></a></li>
+            <li><a href="/Illegal_Services/credits.html"><i class="fa fa-handshake-o"></i><span class="navbar-item-text">Credits</span></a></li>
+            <li class="navbar-item-active"><a href="/Illegal_Services/tutorial.html"><i class="fa fa-life-ring"></i><span class="navbar-item-text">Tutorial</span></a></li>
+            <li><a href="/Illegal_Services/faq.html"><i class="fa fa-question-circle"></i><span class="navbar-item-text">FAQ</span></a></li>
+            <li><a href="/Illegal_Services/downloads.html"><i class="fa fa-cloud-download"></i><span class="navbar-item-text">Downloads</span></a></li>
+            <li><a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html"><i class="fa fa-bookmark-o"></i><span class="navbar-item-text">IS Bookmarks</span></a></li>
+        </ul>
     </nav>
-    <br>
     <div class="text">
-        <h3>
-            <a href="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html" title="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html" target="_blank">IS.bookmarks.html</a> is the websites database of Illegal Services.<br>
-            The goal is to update it as much as possible to gather a maximum number of links related to warez (piracy) and cybersecurity.<br>
-            This file is updated at least once a week in order to always stay updated.<br>
-        </h3>
+        <div class="tutorial-goal-header">
+            <h3>
+                <a href="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html" title="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html" target="_blank">IS.bookmarks.html</a> is the websites database of Illegal Services.<br>
+                The goal is to update it as much as possible to gather a maximum number of links related to warez (piracy) and cybersecurity.<br>
+                This file is updated at least once a week in order to always stay updated.<br>
+            </h3>
+        </div>
         <hr class="hr-centered">
-        <h4>
-            <span style="display: block; max-width: 90%; margin: 0 auto;">
+        <div class="tutorial-current-methods-header">
+            <h4>
                 There are currently <u>4 methods</u> to parse and read this file in a human-readable format:
-            </span>
-        </h4>
-        <ul><li><u><a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">IS Bookmarks website</a></u>:</li></ul>
-        With this method, you can navigate the database directly trough internet with using your web browser.
-        <br>
-        This solution is by far the most user-friendly, fastest and easier.
-        <br>
-        <br>
-        <ul><li><u><a href="https://addons.mozilla.org/en-US/firefox/addon/illegal-services/">IS Bookmarks web extension</a></u>:</li></ul>
-        With this method, you can import and navigate the database directly trough your web browser's bookmarks bar.
-        <br>
-        <br>
-        <ul><li><u><a href="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html">IS.bookmarks.html</a></u>:</li></ul>
-        With this method, you can manually import and navigate the database directly trough your web browser's bookmarks.
-        <br>
-        This solution requiere the user to manually update the database to keep it up-to-date.
-        <br>
-        <br>
-        <ul><li><u><a href="https://github.com/Illegal-Services/Illegal_Services">Illegal Services Windows application</a></u>:</li></ul>
-        With this method, you can access the database trough a Windows's application.
-        <br>
-        This solution can be difficult to use for people not familiar with the Windows's command line interface.
-        <br>
-        It is also slower to use and boring to install due to Windows Defender incorrectly flagging it as malware.
-        <br>
-        <br>
+            </h4>
+        </div>
+        <ul>
+            <li>
+                <span class="tutorial-header"><u><a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">IS Bookmarks website</a></u>:</span>
+                <div class="tutorial-text">
+                    With this method, you can navigate the database directly trough internet with using your web browser.<br>
+                    This solution is by far the most user-friendly, fastest and easier.<br>
+                </div>
+            </li>
+            <li>
+                <span class="tutorial-header"><u><a href="https://addons.mozilla.org/en-US/firefox/addon/illegal-services/">IS Bookmarks web extension</a></u>:</span>
+                <div class="tutorial-text">
+                    With this method, you can import and navigate the database directly trough your web browser's bookmarks bar.<br>
+                </div>
+            </li>
+            <li>
+                <span class="tutorial-header"><u><a href="https://raw.githubusercontent.com/Illegal-Services/Illegal_Services/downloads/IS.bookmarks.html">IS.bookmarks.html</a></u>:</span>
+                <div class="tutorial-text">
+                    With this method, you can manually import and navigate the database directly trough your web browser's bookmarks.<br>
+                    This solution requiere the user to manually update the database to keep it up-to-date.<br>
+                </div>
+            </li>
+            <li>
+                <span class="tutorial-header"><u><a href="https://github.com/Illegal-Services/Illegal_Services">Illegal Services Windows application</a></u>:</span>
+                <div class="tutorial-text">
+                    With this method, you can access the database trough a Windows's application.<br>
+                    This solution can be difficult to use for people not familiar with the Windows's command line interface.<br>
+                    It is also slower to use and boring to install due to Windows Defender incorrectly flagging it as malware.<br>
+                </div>
+            </li>
+        </ul>
     </div>
-    <br>
-    <br>
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
         <a href="https://github.com/Illegal-Services/Illegal_Services" target="_blank"><img src="svgs/github.svg" alt="GitHub" title="https://github.com/Illegal-Services/Illegal_Services"></a>
