@@ -136,7 +136,7 @@ def write_html_header() -> None:
                 <title>IS Bookmarks - Illegal Services</title>
                 <link rel="shortcut icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
                 <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
-                <link rel="stylesheet" href="/Illegal_Services/css/global-layout.css">
+                <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
                 <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
                 <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
             </head>
