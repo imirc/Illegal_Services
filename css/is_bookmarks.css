@@ -1,30 +1,27 @@
-div.search-or-request_parent, div.search-or-request_container {
-    margin: 20px;
-}
-div.search-or-request_container {
+div.search-or-request-container {
     text-align: center;
+    margin: 20px auto;
 }
-div.search-or-request_child1, div.search-or-request_child2 {
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #7200ff, 0 0 1em #7200ff, 0 0 0.2em #7200ff;
-    text-align: center;
+div.search-or-request {
     display: inline-block;
+    color: #ffffff;
+    padding: 0px 10px 4px 10px;
+    text-shadow: 1px 1px 2px #7200ff, 0 0 1em #7200ff, 0 0 0.2em #7200ff;
     border: 1px solid #7200ff;
     background-color: #003300;
-    padding: 0px 10px 3px 10px;
-    height: 100px;
-    width: 330px;
     margin: 1px;
+    width: 100%;
+    max-width: 330px;
+    max-height: 100px;
+    font-size: 16px;
 }
 
 div.pathbar {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: fit-content;
     text-align: center;
     font-size: 20px;
     max-width: 80%;
-    min-width: 300px;
     padding: 6px;
     padding-left: 8px;
     padding-right: 8px;
@@ -34,8 +31,7 @@ div.pathbar {
 }
 
 div.vertical-menu {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 294px;
     background-color: #35393b;
     text-align: left;
@@ -46,6 +42,12 @@ div.vertical-menu a {
     padding: 12px;
     font-size: 16px;
 }
+div.vertical-menu > hr {
+    padding: 0;
+    margin: 0;
+	border: 0;
+	border-top: 1px solid #494c4e;
+}
 div.vertical-menu a:hover {
     background-color: #535757;
 }
@@ -55,16 +57,9 @@ div.vertical-menu > a > i, img {
     padding-right: 8px;
 }
 
-div.vertical-menu > hr {
-    padding: 0;
-    margin: 0;
-	border: 0;
-	border-top: 1px solid #494c4e;
-}
-
 div.counter {
     width: fit-content;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
     text-align: center;
     background: #ffc0cb;
     color: #000000;
@@ -73,7 +68,7 @@ div.counter {
 div.javascript-disabled {
     text-align: center;
     width: 400px;
-    margin: 20px auto 20px auto;
+    margin: 20px auto;
     padding: 15px;
     color: #000000;
     border: 1px solid #ccc;
@@ -90,8 +85,10 @@ div.javascript-disabled > img {
 
 
 @media screen and (max-width: 1000px) {
+    div.search-or-request {
+        font-size: 14px;
+    }
     div.pathbar {
-        max-width: 90%;
         font-size: 15px;
     }
 }

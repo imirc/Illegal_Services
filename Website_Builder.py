@@ -153,30 +153,28 @@ def write_html_header() -> None:
                     </ul>
                 </nav>
 
-                <div class="search-or-request_parent">
-                    <div class="search-or-request_container">
-                        <div class="search-or-request_child1">
-                            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                                <h4>
-                                    <label for="search_link">Search a link or folder in IS database:</label>
-                                    <br>
-                                    <br>
-                                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                                    <input type="submit" value="Search">
-                                </h4>
-                            </form>
-                        </div>
-                        <div class="search-or-request_child2">
-                            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                                <h4>
-                                    <label for="request_link">Request a link to be added in IS database:</label>
-                                    <br>
-                                    <br>
-                                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                                    <input type="submit" value="Request">
-                                </h4>
-                            </form>
-                        </div>
+                <div class="search-or-request-container">
+                    <div class="search-or-request">
+                        <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
+                            <h4>
+                                <label for="search_link">Search a link or folder in IS database:</label>
+                                <br>
+                                <br>
+                                <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
+                                <input type="submit" value="Search">
+                            </h4>
+                        </form>
+                    </div>
+                    <div class="search-or-request">
+                        <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
+                            <h4>
+                                <label for="request_link">Request a link to be added in IS database:</label>
+                                <br>
+                                <br>
+                                <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
+                                <input type="submit" value="Request">
+                            </h4>
+                        </form>
                     </div>
                 </div>
 
