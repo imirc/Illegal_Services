@@ -150,6 +150,7 @@ def write_html_header() -> None:
                         <li><a href="/Illegal_Services/faq.html"><i class="fa fa-question-circle"></i><span class="navbar-item-text">FAQ</span></a></li>
                         <li><a href="/Illegal_Services/downloads.html"><i class="fa fa-cloud-download"></i><span class="navbar-item-text">Downloads</span></a></li>
                         <li class="navbar-item-active"><a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html"><i class="fa fa-bookmark-o"></i><span class="navbar-item-text">IS Bookmarks</span></a></li>
+                        <li><div id="google-translate-element"></div></li>
                     </ul>
                 </nav>
 
@@ -218,6 +219,8 @@ def write_footer() -> None:
                     <br>
                     © 2020-2023 IB_U_Z_Z_A_R_Dl. All rights reserved.
                 </footer>
+
+                <script src="/Illegal_Services/js/translations.js"></script>
             </body>
 
             </html>
@@ -242,7 +245,7 @@ def create_folder_or_path(folder_or_path: Path):
 
 links_counter = 0
 
-for file_or_folder in [Path(R"Bookmarks Toolbar"), Path(R"js")]:
+for file_or_folder in [Path(R"Bookmarks Toolbar"), Path(R"js/counter.js")]:
     if file_or_folder.exists():
         if file_or_folder.is_dir():
             shutil.rmtree(file_or_folder)

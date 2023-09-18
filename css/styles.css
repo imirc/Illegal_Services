@@ -11,7 +11,7 @@ nav.navbar {
     text-align: center;
     border: 1px solid #7200ff;
     background-color: #555;
-    font-size: 20px;
+    margin: 0 auto;
 }
 nav.navbar > ul {
     /* Reset default list styles */
@@ -20,6 +20,9 @@ nav.navbar > ul {
     padding: 0;
     /* Reset default list styles */
     display: inline-block;
+    font-size: 20px;
+    background-color: #555;
+    max-width: 90%;
 }
 nav.navbar > ul > li {
     display: inline;
@@ -52,6 +55,27 @@ nav.navbar > ul > li > a:hover {
 nav.navbar > ul > li > a > .navbar-item-text {
     padding-left: 5px;
 }
+
+nav.navbar > ul > li > div#google-translate-element > div.skiptranslate.goog-te-gadget  {
+    padding: 4px 6px;
+}
+
+/* FEATURE DROPPED, I COULDN'T MANAGE TO MAKE IT WORKING.
+div#google_translate_element {
+    display: inline-block;
+    background-color: #1c1c1c;
+    border: 1px solid #7200ff;
+    padding: 15px 10px;
+    text-align: center;
+    min-width: 50px;
+}
+
+
+div#google_translate_element:hover {
+    background-color: #000000;
+    transition: background-color 0.3s;
+}
+*/
 
 footer {
     text-align: center;
