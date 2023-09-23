@@ -8,6 +8,8 @@ window.onload = function () {
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
     pageLanguage: "en",
-    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL,
+    autoDisplay: false,
+    exclude: ['.notranslate']
   }, "google-translate-element");
 }

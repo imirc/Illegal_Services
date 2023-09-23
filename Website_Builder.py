@@ -133,7 +133,7 @@ def write_html_header() -> None:
                 <meta name="description" content="Illegal Services Bookmarks">
                 <meta name="keywords" content="Illegal, Services, Bookmarks, website">
                 <meta name="author" content="IB_U_Z_Z_A_R_Dl">
-                <title>IS Bookmarks - Illegal Services</title>
+                <title class="notranslate">IS Bookmarks - Illegal Services</title>
                 <link rel="shortcut icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
                 <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
                 <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
@@ -179,11 +179,11 @@ def write_html_header() -> None:
                     </div>
                 </div>
 
-                <div class="pathbar">
+                <div class="pathbar notranslate">
                     {display_pathbar}
                 </div>
 
-                <div class="vertical-menu">
+                <div class="vertical-menu notranslate">
         """
         text = textwrap.dedent(text).removeprefix("\n")
         file.write(text)
