@@ -1,5 +1,5 @@
 document.write(`
     <div class="counter">
-        Updated: 23/09/2023&nbsp;&nbsp;|&nbsp;&nbsp;7745 links indexed.
+        Updated: 25/09/2023&nbsp;&nbsp;|&nbsp;&nbsp;8013 links indexed.
     </div>
 `);
