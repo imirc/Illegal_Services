@@ -8,8 +8,8 @@ REM  Copyrights: Copyright (C) 2023 IB_U_Z_Z_A_R_Dl
 REM  Trademarks: Copyright (C) 2023 IB_U_Z_Z_A_R_Dl
 REM  Originalname: Illegal_Services.exe
 REM  Comments: Illegal Services
-REM  Productversion:  6. 1. 9. 4
-REM  Fileversion:  6. 1. 9. 4
+REM  Productversion:  6. 1. 9. 5
+REM  Fileversion:  6. 1. 9. 5
 REM  Internalname: Illegal_Services.exe
 REM  Appicon: Ressources\Icons\icon.ico
 REM  AdministratorManifest: Yes
@@ -140,7 +140,7 @@ if /i not "%~x0"==".exe" (
 )
 if not "%~1"=="" (
     if defined language (
-        for %%A in (FAQ SCANWEBSITES NMAP YOUTUBEDL PINGER IS_BOOKMARKS_PARSER) do (
+        for %%A in (SCANWEBSITES NMAP YOUTUBEDL PINGER IS_BOOKMARKS_PARSER) do (
             if "%~1"=="%%A" (
                 call :APPLY_BACKGROUND_SETTINGS
                 for /f "tokens=6" %%A in ('!cmdwiz.exe! getconsoledim') do (
@@ -222,7 +222,7 @@ for /f %%A in ('2^>nul dir "!TMPF!\????????.bat" /a:-d /o:-d /b ^| findstr /rxc:
 :LAUNCHER
 if defined VERSION set OLD_VERSION=!VERSION!
 if defined lastversion set OLD_LASTVERSION=!lastversion!
-set VERSION=v6.1.9.4 - 25/08/2023
+set VERSION=v6.1.9.5 - 30/09/2023
 set "@move_right=!\E![?C"
 set "el=UNDERLINE=!\E![04m,UNDERLINEOFF=!\E![24m,BLACK=!\E![30m,RED=!\E![31m,GREEN=!\E![32m,YELLOW=!\E![33m,BLUE=!\E![34m,MAGENTA=!\E![35m,CYAN=!\E![36m,WHITE=!\E![37m,BGBLACK=!\E![40m,BGYELLOW=!\E![43m,BGWHITE=!\E![47m,BGBRIGHTBLACK=!\E![100m,BRIGHTBLACK=!\E![90m,BRIGHTRED=!\E![91m,BRIGHTBLUE=!\E![94m,BRIGHTMAGENTA=!\E![95m"
 set "%el:,=" && set "%"
@@ -234,7 +234,8 @@ if "!language!"=="EN" call :DRAW_CENTER newline "!RED!♥   !YELLOW!Welcome [!RE
 if "!language!"=="FR" call :DRAW_CENTER newline "!RED!♥   !YELLOW!Bienvenue [!RED!!IS_Username!!YELLOW!] dans Illegal Services !VERSION:~0,8!   !RED!♥"
 echo %@move_right:?=28%!CYAN!{!RED!+!CYAN!}---------------------------------------------------------------{!RED!+!CYAN!}
 for /f %%A in ('2^>nul dir "!TMPF!\URL????.url" /a:-d /b ^| findstr /rc:"URL....\.url"') do del /f /q "!TMPF!\%%A"
-for %%A in (README.md "Illegal Services.exe" "!TMPF!\msgbox.vbs" "!TMPF!\IS.Setup.exe") do if exist "%%~A" del /f /q "%%~A"
+:: MEMO to delete file "Tutorial.html" in release v6.2.0.0
+for %%A in (README.md Tutorial.html "Illegal Services.exe" "!TMPF!\msgbox.vbs" "!TMPF!\IS.Setup.exe") do if exist "%%~A" del /f /q "%%~A"
 for %%A in ("!CD:~0,2!\AI_RecycleBin" "!SystemDrive!\AI_RecycleBin" "!TMPF!\IB_U_Z_Z_A_R_Dl") do if exist "%%~A" 2>nul rd /s /q "%%~A"
 set "sp=%@move_right:?=28%!YELLOW!{$} !BRIGHTBLACK!"
 echo !BRIGHTBLACK!
@@ -311,7 +312,7 @@ if defined lastversion (
 if "!language!"=="EN" <nul set /p="!sp!Checking files integrity > "
 if "!language!"=="FR" <nul set /p="!sp!Vérification de l'intégrite des fichiers > "
 set x1=
-for %%A in (lib\binread\x!ARCH!\binread.exe ChangeLog.txt COPYING EULA.rtf Illegal_Services.exe Tutorial.html lib\7za\x64\7za.dll lib\7za\x64\7za.exe lib\7za\x64\7zxa.dll lib\7za\x86\7za.dll lib\7za\x86\7za.exe lib\7za\x86\7zxa.dll lib\backgrounds\background-1.jpg lib\backgrounds\background-2.jpg lib\backgrounds\background-3.jpg lib\backgrounds\background-4.jpg lib\backgrounds\background-5.jpg lib\backgrounds\background-6.jpg lib\backgrounds\background-7.jpg lib\backgrounds\background-8.jpg lib\backgrounds\background-9.jpg lib\backgrounds\background-10.jpg lib\backgrounds\background-11.jpg lib\backgrounds\background-12.jpg lib\binread\x64\binread.exe lib\binread\x86\binread.exe lib\curl\x64\curl.exe lib\curl\x86\curl.exe lib\speak\extd.exe lib\speak\EN.lang lib\speak\FR.lang lib\speak\x64\speak-x64.exe lib\speak\x86\speak-x86.exe lib\bookmarks_parser.exe lib\cmdbkg.exe lib\cmdwiz.exe lib\OpenFileBox.exe lib\SaveFileBox.exe) do (
+for %%A in (lib\binread\x!ARCH!\binread.exe ChangeLog.txt COPYING EULA.rtf Illegal_Services.exe lib\7za\x64\7za.dll lib\7za\x64\7za.exe lib\7za\x64\7zxa.dll lib\7za\x86\7za.dll lib\7za\x86\7za.exe lib\7za\x86\7zxa.dll lib\backgrounds\background-1.jpg lib\backgrounds\background-2.jpg lib\backgrounds\background-3.jpg lib\backgrounds\background-4.jpg lib\backgrounds\background-5.jpg lib\backgrounds\background-6.jpg lib\backgrounds\background-7.jpg lib\backgrounds\background-8.jpg lib\backgrounds\background-9.jpg lib\backgrounds\background-10.jpg lib\backgrounds\background-11.jpg lib\backgrounds\background-12.jpg lib\binread\x64\binread.exe lib\binread\x86\binread.exe lib\curl\x64\curl.exe lib\curl\x86\curl.exe lib\speak\extd.exe lib\speak\EN.lang lib\speak\FR.lang lib\speak\x64\speak-x64.exe lib\speak\x86\speak-x86.exe lib\bookmarks_parser.exe lib\cmdbkg.exe lib\cmdwiz.exe lib\OpenFileBox.exe lib\SaveFileBox.exe) do (
     if not exist %%A (
         call :MISSING_FILE %%A
         set "x2=%%A"
@@ -501,13 +502,22 @@ call :CHOOSE !t! && (
 if "!language!"=="EN" set t=Settings
 if "!language!"=="FR" set t=Paramètres
 call :CHOOSE !t! && goto :SETTINGS
-call :CHOOSE HELP && (start /max "" "tutorial.html" & goto :MAINMENU)
+call :CHOOSE HELP && (
+    start "" "https://illegal-services.github.io/Illegal_Services/index.html"
+    start "" "https://illegal-services.github.io/Illegal_Services/tutorial.html"
+    goto :MAINMENU
+)
 call :CHOOSE CHANGELOG && (start /max "" "changeLog.txt" & goto :MAINMENU)
-call :CHOOSE FAQ && (call :SHOW_WINDOW "Frequently Asked Questions" || (start "" "%~f0" FAQ) & goto :MAINMENU)
+call :CHOOSE FAQ && (
+    start "" "https://illegal-services.github.io/Illegal_Services/faq.html"
+    goto :MAINMENU
+)
 if /i "!x!"=="--dump" (
     call :GET_DATE_TIME
     if not exist "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\" (
-        md "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\"
+        md "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\" || (
+            call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\"
+        )
     )
     >"!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\DUMP.log" (
         echo errorlevel=%errorlevel%
@@ -518,7 +528,9 @@ if /i "!x!"=="--dump" (
 ) else if /i "!x!"=="--dump-IS" (
     call :GET_DATE_TIME
     if not exist "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\" (
-        md "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\"
+        md "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\" || (
+            call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\"
+        )
     ) else if exist "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\DUMP_IS.log" (
         del /f /q "!IS_OUTPUT_DIRECTORY_LOGS!\user\!date_time!\DUMP_IS.log"
     )
@@ -636,7 +648,14 @@ if "!x!"=="15" goto :SETTING_BACKGROUND
 if "!x!"=="16" goto :SETTING_UNTRUSTEDWEBSITES
 if "!x!"=="17" goto :SETTING_ROSE
 if "!x!"=="18" goto :SETTING_DEVELOPERMODE
-if "!x!"=="19" call :SHOW_WINDOW "websites indexed" || (start "" "%~f0" SCANWEBSITES) & goto :CONTINUESETTINGS
+if "!x!"=="19" (
+    call :SHOW_WINDOW "websites indexed" || (
+        echo "%~f0"
+        pause
+        start "" "%~f0" SCANWEBSITES
+    )
+    goto :CONTINUESETTINGS
+)
 if "!x!"=="20" goto :SETTING_VERSION
 if "!x!"=="21" goto :SETTING_USERNAME
 if "!x!"=="22" goto :SETTING_LANGUAGE
@@ -1414,7 +1433,9 @@ if "!language!"=="FR" set t="Entrez le nom de la victime: "
 call :INPUTBOX
 if not exist "!IS_OUTPUT_DIRECTORY!\IP Lookup Saved.txt" (
     if not exist "!IS_OUTPUT_DIRECTORY!\" (
-        md "!IS_OUTPUT_DIRECTORY!"
+        md "!IS_OUTPUT_DIRECTORY!" || (
+            call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY!"
+        )
     )
     >"!IS_OUTPUT_DIRECTORY!\IP Lookup Saved.txt" (
         echo =============================================
@@ -2141,7 +2162,9 @@ echo:
 call :PROMPT
 for /l %%A in (1,1,2) do if "!x!"=="%%A" (
     if not exist "!IS_OUTPUT_DIRECTORY_HWID!\" (
-        md "!IS_OUTPUT_DIRECTORY_HWID!"
+        md "!IS_OUTPUT_DIRECTORY_HWID!" || (
+            call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY_HWID!"
+        )
     )
     set hwid_wmic_parser[failed][#]=0
     call :GET_DATE_TIME
@@ -2451,145 +2474,6 @@ if "!language!"=="EN" set t="Illegal Services cannot continue running 'Illegal S
 if "!language!"=="FR" set t="Illegal Services ne peut pas continuer à exécuter 'Illegal Services.exe' car son accès semble être refusé.!\N!Cette erreur: '!errorlevel!' est connue pour être Windows Defender bloquant l'accès au fichier car il est détecté que le fichier contient un virus ou un logiciel indésirable.!\N!!\N!Nous vous recommandons de mettre en liste blanche le chemin d'accès d'Illegal Services (!IS_DIR!) dans votre ou vos logiciels antivirus pour réparer ce problème et éviter un problème similaire à l'avenir."
 call :MSGBOX 69680 "Illegal Services"
 goto :CHECKER_BUILD_FOUND
-
-:PROCESS_FAQ
-if "!language!"=="EN" call :SCALE 105 58
-if "!language!"=="FR" call :SCALE 124 58
-title !#TITLE:`=Frequently Asked Questions!
-call :ROSE FAQ
-echo !CYAN!
-if "!language!"=="EN" set "t=Here is a list of frequently asked questions about Illegal Services:"
-if "!language!"=="FR" set "t=Voici une liste questions de questions fréquemment posées à propos d'Illegal Services:"
-call :DRAW_CENTER newline "■█!BGYELLOW!!RED!█ !BLACK!!t!!RED! █!BGBLACK!!CYAN!█■"
-echo:
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Is Illegal Services open source? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Yes, under the General Public License v3.0 ^(GNU GPLv3^).
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Est-ce qu'Illegal Services est Open Source ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Oui, sous la General Public License v3.0 ^(GNU GPLv3^).
-)
-echo %@move_right:?=6%!GREEN!!UNDERLINE!!git_source:[404 Git proxy not found]=[404 Git proxy not found]. Maybe: https://github.com/Illegal-Services/Illegal_Services/tree/source!!UNDERLINEOFF!
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Is Illegal Services illegal? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Illegal Services is legal, but services provided inside are mostly illegal.
-echo %@move_right:?=6%!GREEN!Illegal Services does not store any copyrighted files locally or on its server.
-echo %@move_right:?=6%!GREEN!All content are provided by non-affiliated third parties.
-echo %@move_right:?=6%!GREEN!You are solely responsible for their use at your own risk.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Illegal Services est-il illégal ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Illegal Services est légal, mais les services fournis à l'intérieur sont principalement illégaux.
-echo %@move_right:?=6%!GREEN!Illegal Services ne stocke aucun fichier sous copyright localement ou sur son serveur.
-echo %@move_right:?=6%!GREEN!Tous les contenus sont fournis par des tiers non affiliés.
-echo %@move_right:?=6%!GREEN!Vous êtes tenu comme seul responsable de leur utilisation à vos propres risques.
-)
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Why is Illegal Services detected by many antiviruses? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!The source code is converted from batch to executable using !UNDERLINE!https://www.abyssmedia.com/quickbfc/!UNDERLINEOFF!
-echo %@move_right:?=6%!GREEN!This conversion process leads to believe that it is a virus.
-echo %@move_right:?=6%!GREEN!It is therefore a false positive result.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Pourquoi Illegal Services est detecté par beaucoup d'antivirus ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Le code source est convertie de batch en executable en utilisant !UNDERLINE!https://www.abyssmedia.com/quickbfc/!UNDERLINEOFF!
-echo %@move_right:?=6%!GREEN!Ce processus de conversion fait laisser croire qu'il en est un virus.
-echo %@move_right:?=6%!GREEN!Il s'agit donc d'un faux résultat positif.
-)
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Why does Illegal Services keep telling me that a file is missing? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!It must be your antivirus that quarantined the file^(s^).
-echo %@move_right:?=6%!GREEN!You must add this file^(s^) or Illegal Services PATH to its whitelist or deactivate it.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Pourquoi Illegal Services continue-il de me dire qu'un fichier est manquant ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Ce doit être votre antivirus qui met en quarantaine le/les fichier^(s^).
-echo %@move_right:?=6%!GREEN!Vous devez ajouter ce/ces fichier^(s^) ou le chemin d'Illegal Services à sa liste blanche ou désactivez-le.
-)
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Why does Illegal Services ask for administrator privileges? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!The administrator privileges are required for:
-echo %@move_right:?=6%!GREEN!IP Port Scanning, Windows Repair, Windows Tweaks and Windows Game Booster.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Pourquoi Illegal Services demandent-ils des privilèges d'administrateur ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Les privilèges administrateurs sont requis pour:
-echo %@move_right:?=6%!GREEN!IP Port Scanning, Windows Repair, Windows Tweaks et Windows Game Booster.
-)
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Why is Illegal Services x IS.bookmarks.html soooooo slow to start? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!This is known to be Windows Defender or an other antivirus doing it's
-echo %@move_right:?=6%!GREEN!security scans on 'bookmarks_parser.exe' before to run it...
-echo %@move_right:?=6%!GREEN!We recommend whitelisting the Illegal Services folder in your antivirus software^(s^)
-echo %@move_right:?=6%!GREEN!to fix this issue and prevent a similar issue in the future.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Pourquoi Illegal Services x IS.bookmarks.html est-il siiiiii lent à démarrer ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Ceci est connu pour être Windows Defender ou un autre antivirus faisant ces
-echo %@move_right:?=6%!GREEN!scans de sécurité sur 'bookmarks_parser.exe' avant de l'exécuter...
-echo %@move_right:?=6%!GREEN!Nous vous recommandons de mettre en liste blanche le dossier d'Illegal Services dans votre ou vos
-echo %@move_right:?=6%!GREEN!logiciels antivirus pour résoudre ce problème et éviter un problème similaire à l'avenir.
-)
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ What is the difference between build and release updates? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Build updates are updates that do not require you to update the installer.
-echo %@move_right:?=6%!GREEN!They are mostly used to update "Illegal_Services.exe".
-echo %@move_right:?=6%!GREEN!These are the last 2 digits of the version number ^(vx.x.[x.x]^).
-echo %@move_right:?=6%!GREEN!Release updates are updates that requires updating the installer.
-echo %@move_right:?=6%!GREEN!They are only used to update Illegal Services dependencies.
-echo %@move_right:?=6%!GREEN!These are the first 2 digits of the version number ^(v[x.x].x.x^).
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Quelle est la différence entre les mises à jour de build et de release ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Les mises à jour de build sont des mises à jour qui ne vous obligent pas à mettre à jour l'installateur.
-echo %@move_right:?=6%!GREEN!Elles sont principalement utilisés pour mettre à jour "Illegal_Services.exe".
-echo %@move_right:?=6%!GREEN!Ce sont les 2 derniers chiffres du  la version ^(vx.x.[x.x]^).
-echo %@move_right:?=6%!GREEN!Les mises à jour de release sont des mises à jour nécessitant une mise à jour de l'installateur.
-echo %@move_right:?=6%!GREEN!Ils ne sont utilisés que pour mettre à jour les dépendances d'Illegal Services.
-echo %@move_right:?=6%!GREEN!Ce sont les 2 premiers chiffres de la version ^(v [x.x].x.x^).
-)
-echo !CYAN!
-if "!language!"=="EN" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ With which operating systems is Illegal Services compatible? █!BGBLACK!!CYAN!█■
-if "!language!"=="FR" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Avec qu'elle système d'exploitation Illegal Services est-t'il compatible ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Windows 10 and 11 (x86/x64).
-echo !CYAN!
-if "!language!"=="EN" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Can you make Illegal Services compatible with more operating system? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!No, because the source code of Illegal Services is made in Batch,
-echo %@move_right:?=6%!GREEN!and this can only be run on a Windows machine.
-echo %@move_right:?=6%!GREEN!That said, IS Bookmarks and IS Bookmarks web extension ^(discontinued^)
-echo %@move_right:?=6%!GREEN!can be accessed through any web browser.
-)
-if "!language!"=="FR" (
-echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Pouvez-vous rendre Illegal Services compatible pour d'autre système d'exploitation ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!Non, car le code source d'Illegal Services est fait en Batch,
-echo %@move_right:?=6%!GREEN!et cela ne peut être exécuté que sur une machine Windows.
-echo %@move_right:?=6%!GREEN!Cela dit, IS Bookmarks et l'extension Web IS Bookmarks ^(abandonnée^)
-echo %@move_right:?=6%!GREEN!est accessible via n'importe quel navigateur Web.
-)
-echo !CYAN!
-if "!language!"=="EN" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ In which languages is Illegal Services developed? █!BGBLACK!!CYAN!█■
-if "!language!"=="FR" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ En quels langages est développé Illegal Services ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!98%% Batch, 1%% PowerShell, 1%% VBScript.
-echo !CYAN!
-if "!language!"=="EN" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ When did you start Illegal Services project? █!BGBLACK!!CYAN!█■
-if "!language!"=="FR" echo %@move_right:?=3%■█!BGWHITE!!RED!█ ♦ Quand est-ce que le projet d'Illegal Services à commencé ? █!BGBLACK!!CYAN!█■
-echo %@move_right:?=6%!GREEN!v1.0.0.0 - 22/05/2020
-echo !CYAN!
-if "!language!"=="EN" set "t=Press !YELLOW!{ANY KEY}!CYAN! to exit ..."
-if "!language!"=="FR" set "t=Appuyez sur !YELLOW!{UNE TOUCHE}!CYAN! pour quitter ..."
-call :DRAW_CENTER no_newline t
-%@SHOWCURSOR%
->nul pause
-exit 0
 
 :PROCESS_SCANWEBSITES
 if "!language!"=="EN" (
@@ -3324,14 +3208,11 @@ for %%A in (!GIT_LIST!) do (
 exit /b 1
 
 :_DOWNLOAD_CURL
-if not exist curl.exe (
-    exit /b 1
-)
 if not !errorlevel!==0 (
     del curl.exe
     exit /b 1
 )
-if not exist "curl.exe" (
+if not exist curl.exe (
     exit /b 1
 )
 call :CHECK_FILE_SIGNATURE curl.exe 8 || (
@@ -3339,7 +3220,7 @@ call :CHECK_FILE_SIGNATURE curl.exe 8 || (
 )
 if not exist "lib\curl\x!ARCH!\" (
     md "lib\curl\x!ARCH!" || (
-        exit /b 1
+        call :ERROR_FATAL MD "lib\curl\x!ARCH!"
     )
 )
 >nul move /y "curl.exe" "lib\curl\x!ARCH!\curl.exe" || (
@@ -3384,7 +3265,11 @@ if "!language!"=="EN" set t=Downloading
 if "!language!"=="FR" set t=Téléchargement
 <nul set /p="!CYAN!!t!: !YELLOW!!curl_url!!CYAN!"
 echo:
-md "%~dp1"
+if not exist "%~dp1" (
+    md "%~dp1" || (
+        call :ERROR_FATAL MD "%~dp1"
+    )
+)
 >nul curl.exe -f#kLo "%~1" "!curl_url!" || (
     if not defined LOOKUP_curl_proxy_url_tries (
         call :ERROR_CURL "%~f1"
@@ -3431,7 +3316,11 @@ for /f "tokens=1*delims=/" %%A in ("%~2") do (
                             if "!language!"=="FR" set "t=Téléchargement: "
                             <nul set /p="!CYAN!!t!!YELLOW!%%~G!CYAN!"
                             echo:
-                            md "%~dp1"
+                            if not exist "%~dp1" (
+                                md "%~dp1" || (
+                                    call :ERROR_FATAL MD "%~dp1"
+                                )
+                            )
                             >nul curl.exe -f#kLo "%~1" "%%~G" && (
                                 call :CHECK_FILE_SIGNATURE "%~f1" 8 && (
                                     goto :CURL_CONTINUE
@@ -3541,12 +3430,13 @@ call :CHECK_PATH IS_OUTPUT_DIRECTORY && (
     if exist "!IS_OUTPUT_DIRECTORY!\" (
         goto :SET_IS_OUTPUT_DIRECTORYS_SETUP_LAUNCHER
     ) else (
-        md "!IS_OUTPUT_DIRECTORY!" && (
-            if exist "!IS_OUTPUT_DIRECTORY!\" (
-                rd "!IS_OUTPUT_DIRECTORY!" && (
-                    if not exist "!IS_OUTPUT_DIRECTORY!\" (
-                        goto :SET_IS_OUTPUT_DIRECTORYS_SETUP_LAUNCHER
-                    )
+        md "!IS_OUTPUT_DIRECTORY!" || (
+            call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY!"
+        )
+        if exist "!IS_OUTPUT_DIRECTORY!\" (
+            rd "!IS_OUTPUT_DIRECTORY!" && (
+                if not exist "!IS_OUTPUT_DIRECTORY!\" (
+                    goto :SET_IS_OUTPUT_DIRECTORYS_SETUP_LAUNCHER
                 )
             )
         )
@@ -4608,6 +4498,10 @@ if "%1"=="IS_PATH_BAT_USED" (
     if "!language!"=="EN" set t="Illegal Services could not determine the current date and time.!\N!!\N!Please report this bug on our Telegram forum in order to correct this bug in a future release."
     if "!language!"=="FR" set t="Illegal Services n'a pas pu déterminer la date et l'heure actuelles.!\N!!\N!Veuillez signaler ce bug sur le forum Telegram d'Illegal Services afin de corriger ce bug dans une future version."
     set x2=1
+) else if "%1"=="MD" (
+    if "!language!"=="EN" set t="Illegal Services could not create directory '%~2'.!\N!!\N!Please report this bug on our Telegram forum in order to correct this bug in a future release."
+    if "!language!"=="FR" set t="Illégal Service n'a pas pu créer le répertoire '%~2'.!\N!!\N!Veuillez signaler ce bug sur le forum Telegram d'Illegal Services afin de corriger ce bug dans une future version."
+    set x2=1
 ) else if "%1"=="HASH" (
     if "!language!"=="EN" set t="Illegal Services could not determine the HASH of the file '%~2'.!\N!!\N!Please report this bug on our Telegram forum in order to correct this bug in a future release."
     if "!language!"=="FR" set t="Illegal Services n'a pas pu déterminer le HASH du fichier '%~2'.!\N!!\N!Veuillez signaler ce bug sur le forum Telegram d'Illegal Services afin de corriger ce bug dans une future version."
@@ -4648,7 +4542,9 @@ if not "%1"=="DATE_TIME" (
     if defined IS_OUTPUT_DIRECTORY (
         call :GET_DATE_TIME
         if not exist "!IS_OUTPUT_DIRECTORY_LOGS!\crashes\!date_time!\" (
-            md "!IS_OUTPUT_DIRECTORY_LOGS!\crashes\!date_time!\"
+            md "!IS_OUTPUT_DIRECTORY_LOGS!\crashes\!date_time!\" || (
+                call :ERROR_FATAL MD "!IS_OUTPUT_DIRECTORY_LOGS!\crashes\!date_time!\"
+            )
         )
         >"!IS_OUTPUT_DIRECTORY_LOGS!\crashes\!date_time!\DUMP.log" (
             echo errorlevel=!#el_fatal!
