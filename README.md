@@ -2,7 +2,7 @@
 <img src="https://i.imgur.com/Cd6mBVN.png">
 <hr>
 
-Illegal Services is an application created to facilitate access to the site of illegal downloads: streaming, torrent, direct download, cracks, DDoS...
+Illegal Services is a project created to facilitate access to the site of illegal downloads: streaming, torrent, direct download, cracks, DDoS...
 Indeed, illegal sites must constantly change their domain names to counter government attacks. It's very annoying to have to find them every time.
 This is why Illegal Services will be your best friend. Especially since it only chooses a list of the best sites, and no scam site is included.
 
