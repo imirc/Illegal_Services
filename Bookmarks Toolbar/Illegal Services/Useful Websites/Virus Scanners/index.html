@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,58 +30,57 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Virus%20Scanners/index.html">Virus&nbsp;Scanners</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://www.virustotal.com/gui/" target="_blank" title="https://www.virustotal.com/gui/"><img src="https://external-content.duckduckgo.com/ip3/www.virustotal.com.ico" alt="favicon">VirusTotal</a>
-        <a href="https://www.hybrid-analysis.com/" target="_blank" title="https://www.hybrid-analysis.com/"><img src="https://external-content.duckduckgo.com/ip3/www.hybrid-analysis.com.ico" alt="favicon">Hybrid&nbsp;Analysis</a>
-        <a href="https://metadefender.opswat.com/" target="_blank" title="https://metadefender.opswat.com/"><img src="https://external-content.duckduckgo.com/ip3/metadefender.opswat.com.ico" alt="favicon">MetaDefender&nbsp;Cloud</a>
-        <a href="https://antiscan.me/" target="_blank" title="https://antiscan.me/"><img src="https://external-content.duckduckgo.com/ip3/antiscan.me.ico" alt="favicon">AntiScan</a>
-        <a href="https://www.malwares.com/" target="_blank" title="https://www.malwares.com/"><img src="https://external-content.duckduckgo.com/ip3/www.malwares.com.ico" alt="favicon">malwares.com</a>
-        <hr>
-        <a href="Sandbox/index.html"><i class="fa fa-folder-o"></i>Sandbox</a>
-        <a href="Fraudulent%20WebsiteU+003F/index.html"><i class="fa fa-folder-o"></i>Fraudulent&nbsp;Website?</a>
-        <a href="Scam%20Advisers/index.html"><i class="fa fa-folder-o"></i>Scam&nbsp;Advisers</a>
-        <a href="Firewalls/index.html"><i class="fa fa-folder-o"></i>Firewalls</a>
-        <a href="Internet%20Monitoring/index.html"><i class="fa fa-folder-o"></i>Internet&nbsp;Monitoring</a>
-        <a href="Process%20Monitoring/index.html"><i class="fa fa-folder-o"></i>Process&nbsp;Monitoring</a>
-        <hr>
-        <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Virus%20Scanners/index.html">Virus&nbsp;Scanners</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://www.virustotal.com/gui/" target="_blank" title="https://www.virustotal.com/gui/"><img src="https://external-content.duckduckgo.com/ip3/www.virustotal.com.ico" alt="favicon">VirusTotal</a>
+            <a href="https://www.hybrid-analysis.com/" target="_blank" title="https://www.hybrid-analysis.com/"><img src="https://external-content.duckduckgo.com/ip3/www.hybrid-analysis.com.ico" alt="favicon">Hybrid&nbsp;Analysis</a>
+            <a href="https://metadefender.opswat.com/" target="_blank" title="https://metadefender.opswat.com/"><img src="https://external-content.duckduckgo.com/ip3/metadefender.opswat.com.ico" alt="favicon">MetaDefender&nbsp;Cloud</a>
+            <a href="https://antiscan.me/" target="_blank" title="https://antiscan.me/"><img src="https://external-content.duckduckgo.com/ip3/antiscan.me.ico" alt="favicon">AntiScan</a>
+            <a href="https://www.malwares.com/" target="_blank" title="https://www.malwares.com/"><img src="https://external-content.duckduckgo.com/ip3/www.malwares.com.ico" alt="favicon">malwares.com</a>
+            <hr>
+            <a href="Sandbox/index.html"><i class="fa fa-folder-o"></i>Sandbox</a>
+            <a href="Fraudulent%20WebsiteU+003F/index.html"><i class="fa fa-folder-o"></i>Fraudulent&nbsp;Website?</a>
+            <a href="Scam%20Advisers/index.html"><i class="fa fa-folder-o"></i>Scam&nbsp;Advisers</a>
+            <a href="Firewalls/index.html"><i class="fa fa-folder-o"></i>Firewalls</a>
+            <a href="Internet%20Monitoring/index.html"><i class="fa fa-folder-o"></i>Internet&nbsp;Monitoring</a>
+            <a href="Process%20Monitoring/index.html"><i class="fa fa-folder-o"></i>Process&nbsp;Monitoring</a>
+            <hr>
+            <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -93,6 +92,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

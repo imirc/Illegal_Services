@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,63 +30,62 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/index.html">Warez&nbsp;Content&nbsp;Creator</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="CoursesU+002FTutorialU+002FGuides/index.html"><i class="fa fa-folder-o"></i>Courses/Tutorial/Guides</a>
-        <a href="Online%20Converters/index.html"><i class="fa fa-folder-o"></i>Online&nbsp;Converters</a>
-        <a href="VideoU+002FAudio%20Editing/index.html"><i class="fa fa-folder-o"></i>Video/Audio&nbsp;Editing</a>
-        <a href="Audio%20Editing/index.html"><i class="fa fa-folder-o"></i>Audio&nbsp;Editing</a>
-        <a href="Pictures%20Editing/index.html"><i class="fa fa-folder-o"></i>Pictures&nbsp;Editing</a>
-        <a href="Ebook%20Editing/index.html"><i class="fa fa-folder-o"></i>Ebook&nbsp;Editing</a>
-        <a href="Subtitle%20Editing/index.html"><i class="fa fa-folder-o"></i>Subtitle&nbsp;Editing</a>
-        <a href="Ebook%20Reader/index.html"><i class="fa fa-folder-o"></i>Ebook&nbsp;Reader</a>
-        <a href="CDU+002FDVD%20Ripping/index.html"><i class="fa fa-folder-o"></i>CD/DVD&nbsp;Ripping</a>
-        <a href="Torrent%20Clients/index.html"><i class="fa fa-folder-o"></i>Torrent&nbsp;Clients</a>
-        <a href="Multimedia%20Player/index.html"><i class="fa fa-folder-o"></i>Multimedia&nbsp;Player</a>
-        <a href="NFO%20Viewer/index.html"><i class="fa fa-folder-o"></i>NFO&nbsp;Viewer</a>
-        <a href="Client%20FTP/index.html"><i class="fa fa-folder-o"></i>Client&nbsp;FTP</a>
-        <a href="Digital%20Media%20Analysis/index.html"><i class="fa fa-folder-o"></i>Digital&nbsp;Media&nbsp;Analysis</a>
-        <a href="Ad%20Blocker/index.html"><i class="fa fa-folder-o"></i>Ad&nbsp;Blocker</a>
-        <a href="Screen%20Recorder/index.html"><i class="fa fa-folder-o"></i>Screen&nbsp;Recorder</a>
-        <a href="File%20Archiver/index.html"><i class="fa fa-folder-o"></i>File&nbsp;Archiver</a>
-        <a href="Windows%20file%20explorer%20tools/index.html"><i class="fa fa-folder-o"></i>Windows&nbsp;file&nbsp;explorer&nbsp;tools</a>
-        <a href="File%20Verification/index.html"><i class="fa fa-folder-o"></i>File&nbsp;Verification</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/index.html">Warez&nbsp;Content&nbsp;Creator</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="CoursesU+002FTutorialU+002FGuides/index.html"><i class="fa fa-folder-o"></i>Courses/Tutorial/Guides</a>
+            <a href="Online%20Converters/index.html"><i class="fa fa-folder-o"></i>Online&nbsp;Converters</a>
+            <a href="VideoU+002FAudio%20Editing/index.html"><i class="fa fa-folder-o"></i>Video/Audio&nbsp;Editing</a>
+            <a href="Audio%20Editing/index.html"><i class="fa fa-folder-o"></i>Audio&nbsp;Editing</a>
+            <a href="Pictures%20Editing/index.html"><i class="fa fa-folder-o"></i>Pictures&nbsp;Editing</a>
+            <a href="Ebook%20Editing/index.html"><i class="fa fa-folder-o"></i>Ebook&nbsp;Editing</a>
+            <a href="Subtitle%20Editing/index.html"><i class="fa fa-folder-o"></i>Subtitle&nbsp;Editing</a>
+            <a href="Ebook%20Reader/index.html"><i class="fa fa-folder-o"></i>Ebook&nbsp;Reader</a>
+            <a href="CDU+002FDVD%20Ripping/index.html"><i class="fa fa-folder-o"></i>CD/DVD&nbsp;Ripping</a>
+            <a href="Torrent%20Clients/index.html"><i class="fa fa-folder-o"></i>Torrent&nbsp;Clients</a>
+            <a href="Multimedia%20Player/index.html"><i class="fa fa-folder-o"></i>Multimedia&nbsp;Player</a>
+            <a href="NFO%20Viewer/index.html"><i class="fa fa-folder-o"></i>NFO&nbsp;Viewer</a>
+            <a href="Client%20FTP/index.html"><i class="fa fa-folder-o"></i>Client&nbsp;FTP</a>
+            <a href="Digital%20Media%20Analysis/index.html"><i class="fa fa-folder-o"></i>Digital&nbsp;Media&nbsp;Analysis</a>
+            <a href="Ad%20Blocker/index.html"><i class="fa fa-folder-o"></i>Ad&nbsp;Blocker</a>
+            <a href="Screen%20Recorder/index.html"><i class="fa fa-folder-o"></i>Screen&nbsp;Recorder</a>
+            <a href="File%20Archiver/index.html"><i class="fa fa-folder-o"></i>File&nbsp;Archiver</a>
+            <a href="Windows%20file%20explorer%20tools/index.html"><i class="fa fa-folder-o"></i>Windows&nbsp;file&nbsp;explorer&nbsp;tools</a>
+            <a href="File%20Verification/index.html"><i class="fa fa-folder-o"></i>File&nbsp;Verification</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -98,6 +97,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

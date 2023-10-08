@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,53 +30,52 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/index.html">Doxing</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/Reverse%20E-mail%20Lookup/index.html">Reverse&nbsp;E-mail&nbsp;Lookup</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://www.emailsherlock.com/" target="_blank" title="https://www.emailsherlock.com/"><img src="https://external-content.duckduckgo.com/ip3/www.emailsherlock.com.ico" alt="favicon">EmailSherlock</a>
-        <a href="https://thatsthem.com/reverse-email-lookup" target="_blank" title="https://thatsthem.com/reverse-email-lookup"><img src="https://external-content.duckduckgo.com/ip3/thatsthem.com.ico" alt="favicon">ThatsThem</a>
-        <a href="https://www.yougetsignal.com/tools/reverse-email-lookup/" target="_blank" title="https://www.yougetsignal.com/tools/reverse-email-lookup/"><img src="https://external-content.duckduckgo.com/ip3/www.yougetsignal.com.ico" alt="favicon">YouGetSignal</a>
-        <a href="https://usersearch.org/" target="_blank" title="https://usersearch.org/"><img src="https://external-content.duckduckgo.com/ip3/usersearch.org.ico" alt="favicon">UserSearch</a>
-        <a href="https://emailrep.io/" target="_blank" title="https://emailrep.io/"><img src="https://external-content.duckduckgo.com/ip3/emailrep.io.ico" alt="favicon">Email&nbsp;Reputation</a>
-        <a href="https://www.spydialer.com/" target="_blank" title="https://www.spydialer.com/"><img src="https://external-content.duckduckgo.com/ip3/www.spydialer.com.ico" alt="favicon">Spy&nbsp;Dialer</a>
-        <a href="https://aruljohn.com/findipfromemail/" target="_blank" title="https://aruljohn.com/findipfromemail/"><img src="https://external-content.duckduckgo.com/ip3/aruljohn.com.ico" alt="favicon">Find&nbsp;IP&nbsp;Address&nbsp;from&nbsp;Email</a>
-        <a href="https://github.com/Ekultek/WhatBreach" target="_blank" title="https://github.com/Ekultek/WhatBreach"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">Ekultek/WhatBreach</a>
-        <a href="PAID/index.html"><i class="fa fa-folder-o"></i>PAID</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/index.html">Doxing</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/Reverse%20E-mail%20Lookup/index.html">Reverse&nbsp;E-mail&nbsp;Lookup</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://www.emailsherlock.com/" target="_blank" title="https://www.emailsherlock.com/"><img src="https://external-content.duckduckgo.com/ip3/www.emailsherlock.com.ico" alt="favicon">EmailSherlock</a>
+            <a href="https://thatsthem.com/reverse-email-lookup" target="_blank" title="https://thatsthem.com/reverse-email-lookup"><img src="https://external-content.duckduckgo.com/ip3/thatsthem.com.ico" alt="favicon">ThatsThem</a>
+            <a href="https://www.yougetsignal.com/tools/reverse-email-lookup/" target="_blank" title="https://www.yougetsignal.com/tools/reverse-email-lookup/"><img src="https://external-content.duckduckgo.com/ip3/www.yougetsignal.com.ico" alt="favicon">YouGetSignal</a>
+            <a href="https://usersearch.org/" target="_blank" title="https://usersearch.org/"><img src="https://external-content.duckduckgo.com/ip3/usersearch.org.ico" alt="favicon">UserSearch</a>
+            <a href="https://emailrep.io/" target="_blank" title="https://emailrep.io/"><img src="https://external-content.duckduckgo.com/ip3/emailrep.io.ico" alt="favicon">Email&nbsp;Reputation</a>
+            <a href="https://www.spydialer.com/" target="_blank" title="https://www.spydialer.com/"><img src="https://external-content.duckduckgo.com/ip3/www.spydialer.com.ico" alt="favicon">Spy&nbsp;Dialer</a>
+            <a href="https://aruljohn.com/findipfromemail/" target="_blank" title="https://aruljohn.com/findipfromemail/"><img src="https://external-content.duckduckgo.com/ip3/aruljohn.com.ico" alt="favicon">Find&nbsp;IP&nbsp;Address&nbsp;from&nbsp;Email</a>
+            <a href="https://github.com/Ekultek/WhatBreach" target="_blank" title="https://github.com/Ekultek/WhatBreach"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">Ekultek/WhatBreach</a>
+            <a href="PAID/index.html"><i class="fa fa-folder-o"></i>PAID</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -88,6 +87,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

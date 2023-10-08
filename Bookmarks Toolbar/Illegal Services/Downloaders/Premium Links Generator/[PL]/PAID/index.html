@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,54 +30,53 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/index.html">Downloaders</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/index.html">Premium&nbsp;Links&nbsp;Generator</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/%5BPL%5D/index.html">[PL]</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/%5BPL%5D/PAID/index.html">PAID</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="http://rapidtraffic.pl/" target="_blank" title="http://rapidtraffic.pl/"><img src="https://external-content.duckduckgo.com/ip3/rapidtraffic.pl.ico" alt="favicon">RapidTraffic</a>
-        <a href="https://rapidox.pl/" target="_blank" title="https://rapidox.pl/"><img src="https://external-content.duckduckgo.com/ip3/rapidox.pl.ico" alt="favicon">Rapidox</a>
-        <a href="https://easyfiles.pl/" target="_blank" title="https://easyfiles.pl/"><img src="https://external-content.duckduckgo.com/ip3/easyfiles.pl.ico" alt="favicon">EasyFiles</a>
-        <a href="https://www.rapids24.pl/" target="_blank" title="https://www.rapids24.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.rapids24.pl.ico" alt="favicon">Rapids24</a>
-        <a href="https://www.twojlimit.pl/" target="_blank" title="https://www.twojlimit.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.twojlimit.pl.ico" alt="favicon">twojlimit</a>
-        <a href="https://www.nopremium.pl/" target="_blank" title="https://www.nopremium.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.nopremium.pl.ico" alt="favicon">nopremium</a>
-        <a href="https://tb7.pl/" target="_blank" title="https://tb7.pl/"><img src="https://external-content.duckduckgo.com/ip3/tb7.pl.ico" alt="favicon">tb7</a>
-        <a href="https://filebit.pl/" target="_blank" title="https://filebit.pl/"><img src="https://external-content.duckduckgo.com/ip3/filebit.pl.ico" alt="favicon">FileBit</a>
-        <a href="https://rapidb.it/pl" target="_blank" title="https://rapidb.it/pl"><img src="https://external-content.duckduckgo.com/ip3/rapidb.it.ico" alt="favicon">Rapidb</a>
-        <a href="https://pobierz.biz/" target="_blank" title="https://pobierz.biz/"><img src="https://external-content.duckduckgo.com/ip3/pobierz.biz.ico" alt="favicon">pobierz.biz</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/index.html">Downloaders</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/index.html">Premium&nbsp;Links&nbsp;Generator</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/%5BPL%5D/index.html">[PL]</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Downloaders/Premium%20Links%20Generator/%5BPL%5D/PAID/index.html">PAID</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="http://rapidtraffic.pl/" target="_blank" title="http://rapidtraffic.pl/"><img src="https://external-content.duckduckgo.com/ip3/rapidtraffic.pl.ico" alt="favicon">RapidTraffic</a>
+            <a href="https://rapidox.pl/" target="_blank" title="https://rapidox.pl/"><img src="https://external-content.duckduckgo.com/ip3/rapidox.pl.ico" alt="favicon">Rapidox</a>
+            <a href="https://easyfiles.pl/" target="_blank" title="https://easyfiles.pl/"><img src="https://external-content.duckduckgo.com/ip3/easyfiles.pl.ico" alt="favicon">EasyFiles</a>
+            <a href="https://www.rapids24.pl/" target="_blank" title="https://www.rapids24.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.rapids24.pl.ico" alt="favicon">Rapids24</a>
+            <a href="https://www.twojlimit.pl/" target="_blank" title="https://www.twojlimit.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.twojlimit.pl.ico" alt="favicon">twojlimit</a>
+            <a href="https://www.nopremium.pl/" target="_blank" title="https://www.nopremium.pl/"><img src="https://external-content.duckduckgo.com/ip3/www.nopremium.pl.ico" alt="favicon">nopremium</a>
+            <a href="https://tb7.pl/" target="_blank" title="https://tb7.pl/"><img src="https://external-content.duckduckgo.com/ip3/tb7.pl.ico" alt="favicon">tb7</a>
+            <a href="https://filebit.pl/" target="_blank" title="https://filebit.pl/"><img src="https://external-content.duckduckgo.com/ip3/filebit.pl.ico" alt="favicon">FileBit</a>
+            <a href="https://rapidb.it/pl" target="_blank" title="https://rapidb.it/pl"><img src="https://external-content.duckduckgo.com/ip3/rapidb.it.ico" alt="favicon">Rapidb</a>
+            <a href="https://pobierz.biz/" target="_blank" title="https://pobierz.biz/"><img src="https://external-content.duckduckgo.com/ip3/pobierz.biz.ico" alt="favicon">pobierz.biz</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -89,6 +88,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

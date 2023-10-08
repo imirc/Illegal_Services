@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,56 +30,55 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/index.html">Warez&nbsp;Content&nbsp;Creator</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/VideoU+002FAudio%20Editing/index.html">Video/Audio&nbsp;Editing</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://mifi.github.io/lossless-cut/" target="_blank" title="https://mifi.github.io/lossless-cut/"><img src="https://external-content.duckduckgo.com/ip3/mifi.github.io.ico" alt="favicon">LosslessCut</a>
-        <a href="https://avidemux.sourceforge.net/" target="_blank" title="https://avidemux.sourceforge.net/"><img src="https://external-content.duckduckgo.com/ip3/avidemux.sourceforge.net.ico" alt="favicon">Avidemux</a>
-        <a href="https://ffmpeg.org/" target="_blank" title="https://ffmpeg.org/"><img src="https://external-content.duckduckgo.com/ip3/ffmpeg.org.ico" alt="favicon">FFmpeg</a>
-        <a href="https://www.shutterencoder.com/" target="_blank" title="https://www.shutterencoder.com/"><img src="https://external-content.duckduckgo.com/ip3/www.shutterencoder.com.ico" alt="favicon">Shutter&nbsp;Encoder</a>
-        <a href="https://handbrake.fr/" target="_blank" title="https://handbrake.fr/"><img src="https://external-content.duckduckgo.com/ip3/handbrake.fr.ico" alt="favicon">HandBrake</a>
-        <a href="https://github.com/mean00/avidemux2" target="_blank" title="https://github.com/mean00/avidemux2"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">mean00/avidemux2:&nbsp;Avidemux2,&nbsp;simple&nbsp;video&nbsp;editor</a>
-        <a href="PROXIES/index.html"><i class="fa fa-folder-o"></i>PROXIES</a>
-        <a href="CONVERTERS/index.html"><i class="fa fa-folder-o"></i>CONVERTERS</a>
-        <a href="FORUMS/index.html"><i class="fa fa-folder-o"></i>FORUMS</a>
-        <hr>
-        <a href=".mkv%20Video%20Editing/index.html"><i class="fa fa-folder-o"></i>.mkv&nbsp;Video&nbsp;Editing</a>
-        <a href=".avi%20stuff/index.html"><i class="fa fa-folder-o"></i>.avi&nbsp;stuff</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/index.html">Warez&nbsp;Content&nbsp;Creator</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Warez%20Content%20Creator/VideoU+002FAudio%20Editing/index.html">Video/Audio&nbsp;Editing</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://mifi.github.io/lossless-cut/" target="_blank" title="https://mifi.github.io/lossless-cut/"><img src="https://external-content.duckduckgo.com/ip3/mifi.github.io.ico" alt="favicon">LosslessCut</a>
+            <a href="https://avidemux.sourceforge.net/" target="_blank" title="https://avidemux.sourceforge.net/"><img src="https://external-content.duckduckgo.com/ip3/avidemux.sourceforge.net.ico" alt="favicon">Avidemux</a>
+            <a href="https://ffmpeg.org/" target="_blank" title="https://ffmpeg.org/"><img src="https://external-content.duckduckgo.com/ip3/ffmpeg.org.ico" alt="favicon">FFmpeg</a>
+            <a href="https://www.shutterencoder.com/" target="_blank" title="https://www.shutterencoder.com/"><img src="https://external-content.duckduckgo.com/ip3/www.shutterencoder.com.ico" alt="favicon">Shutter&nbsp;Encoder</a>
+            <a href="https://handbrake.fr/" target="_blank" title="https://handbrake.fr/"><img src="https://external-content.duckduckgo.com/ip3/handbrake.fr.ico" alt="favicon">HandBrake</a>
+            <a href="https://github.com/mean00/avidemux2" target="_blank" title="https://github.com/mean00/avidemux2"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">mean00/avidemux2:&nbsp;Avidemux2,&nbsp;simple&nbsp;video&nbsp;editor</a>
+            <a href="PROXIES/index.html"><i class="fa fa-folder-o"></i>PROXIES</a>
+            <a href="CONVERTERS/index.html"><i class="fa fa-folder-o"></i>CONVERTERS</a>
+            <a href="FORUMS/index.html"><i class="fa fa-folder-o"></i>FORUMS</a>
+            <hr>
+            <a href=".mkv%20Video%20Editing/index.html"><i class="fa fa-folder-o"></i>.mkv&nbsp;Video&nbsp;Editing</a>
+            <a href=".avi%20stuff/index.html"><i class="fa fa-folder-o"></i>.avi&nbsp;stuff</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -91,6 +90,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

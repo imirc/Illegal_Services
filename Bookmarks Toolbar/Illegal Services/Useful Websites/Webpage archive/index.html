@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,53 +30,52 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Webpage%20archive/index.html">Webpage&nbsp;archive</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://web.archive.org/" target="_blank" title="https://web.archive.org/"><img src="https://external-content.duckduckgo.com/ip3/web.archive.org.ico" alt="favicon">Wayback&nbsp;Machine</a>
-        <a href="https://archive.ph/" target="_blank" title="https://archive.ph/"><img src="https://external-content.duckduckgo.com/ip3/archive.ph.ico" alt="favicon">Webpage&nbsp;archive</a>
-        <a href="https://archive.is/" target="_blank" title="https://archive.is/"><img src="https://external-content.duckduckgo.com/ip3/archive.is.ico" alt="favicon">Webpage&nbsp;archive</a>
-        <a href="https://timetravel.mementoweb.org/" target="_blank" title="https://timetravel.mementoweb.org/"><img src="https://external-content.duckduckgo.com/ip3/timetravel.mementoweb.org.ico" alt="favicon">Time&nbsp;Travel</a>
-        <a href="https://www.webcitation.org/" target="_blank" title="https://www.webcitation.org/"><img src="https://external-content.duckduckgo.com/ip3/www.webcitation.org.ico" alt="favicon">WebCite</a>
-        <a href="https://wiki.archiveteam.org/" target="_blank" title="https://wiki.archiveteam.org/"><img src="https://external-content.duckduckgo.com/ip3/wiki.archiveteam.org.ico" alt="favicon">Archiveteam</a>
-        <a href="https://github.com/dessant/web-archives" target="_blank" title="https://github.com/dessant/web-archives"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">dessant/web-archives:&nbsp;Browser&nbsp;extension&nbsp;for&nbsp;viewing&nbsp;archived&nbsp;and&nbsp;cached&nbsp;versions&nbsp;of&nbsp;web&nbsp;pages,&nbsp;available&nbsp;for&nbsp;Chrome,&nbsp;Edge&nbsp;and&nbsp;Safari</a>
-        <a href="REDDIT/index.html"><i class="fa fa-folder-o"></i>REDDIT</a>
-        <a href="DARKNET/index.html"><i class="fa fa-folder-o"></i>DARKNET</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Webpage%20archive/index.html">Webpage&nbsp;archive</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://web.archive.org/" target="_blank" title="https://web.archive.org/"><img src="https://external-content.duckduckgo.com/ip3/web.archive.org.ico" alt="favicon">Wayback&nbsp;Machine</a>
+            <a href="https://archive.ph/" target="_blank" title="https://archive.ph/"><img src="https://external-content.duckduckgo.com/ip3/archive.ph.ico" alt="favicon">Webpage&nbsp;archive</a>
+            <a href="https://archive.is/" target="_blank" title="https://archive.is/"><img src="https://external-content.duckduckgo.com/ip3/archive.is.ico" alt="favicon">Webpage&nbsp;archive</a>
+            <a href="https://timetravel.mementoweb.org/" target="_blank" title="https://timetravel.mementoweb.org/"><img src="https://external-content.duckduckgo.com/ip3/timetravel.mementoweb.org.ico" alt="favicon">Time&nbsp;Travel</a>
+            <a href="https://www.webcitation.org/" target="_blank" title="https://www.webcitation.org/"><img src="https://external-content.duckduckgo.com/ip3/www.webcitation.org.ico" alt="favicon">WebCite</a>
+            <a href="https://wiki.archiveteam.org/" target="_blank" title="https://wiki.archiveteam.org/"><img src="https://external-content.duckduckgo.com/ip3/wiki.archiveteam.org.ico" alt="favicon">Archiveteam</a>
+            <a href="https://github.com/dessant/web-archives" target="_blank" title="https://github.com/dessant/web-archives"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">dessant/web-archives:&nbsp;Browser&nbsp;extension&nbsp;for&nbsp;viewing&nbsp;archived&nbsp;and&nbsp;cached&nbsp;versions&nbsp;of&nbsp;web&nbsp;pages,&nbsp;available&nbsp;for&nbsp;Chrome,&nbsp;Edge&nbsp;and&nbsp;Safari</a>
+            <a href="REDDIT/index.html"><i class="fa fa-folder-o"></i>REDDIT</a>
+            <a href="DARKNET/index.html"><i class="fa fa-folder-o"></i>DARKNET</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -88,6 +87,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

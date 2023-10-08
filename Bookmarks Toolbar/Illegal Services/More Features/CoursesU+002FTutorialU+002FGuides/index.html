@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,57 +30,56 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/CoursesU+002FTutorialU+002FGuides/index.html">Courses/Tutorial/Guides</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://courseclub.me/" target="_blank" title="https://courseclub.me/"><img src="https://external-content.duckduckgo.com/ip3/courseclub.me.ico" alt="favicon">Course&nbsp;Club</a>
-        <a href="https://freecoursesite.com/" target="_blank" title="https://freecoursesite.com/"><img src="https://external-content.duckduckgo.com/ip3/freecoursesite.com.ico" alt="favicon">FreeCourseSite</a>
-        <a href="https://www.freecoursesonline.me/" target="_blank" title="https://www.freecoursesonline.me/"><img src="https://external-content.duckduckgo.com/ip3/www.freecoursesonline.me.ico" alt="favicon">FreeCoursesOnline</a>
-        <a href="https://gigacourse.com/" target="_blank" title="https://gigacourse.com/"><img src="https://external-content.duckduckgo.com/ip3/gigacourse.com.ico" alt="favicon">GigaCourse</a>
-        <a href="https://tut4it.com/" target="_blank" title="https://tut4it.com/"><img src="https://external-content.duckduckgo.com/ip3/tut4it.com.ico" alt="favicon">Tut4DL</a>
-        <a href="https://freetutsdownload.net/" target="_blank" title="https://freetutsdownload.net/"><img src="https://external-content.duckduckgo.com/ip3/freetutsdownload.net.ico" alt="favicon">Free&nbsp;Tutorials&nbsp;Download</a>
-        <a href="https://online-courses.club/" target="_blank" title="https://online-courses.club/"><img src="https://external-content.duckduckgo.com/ip3/online-courses.club.ico" alt="favicon">Online&nbsp;Courses</a>
-        <a href="https://www.discudemy.com/" target="_blank" title="https://www.discudemy.com/"><img src="https://external-content.duckduckgo.com/ip3/www.discudemy.com.ico" alt="favicon">DiscUdemy</a>
-        <a href="https://github.com/FaisalUmair/udemy-downloader-gui" target="_blank" title="https://github.com/FaisalUmair/udemy-downloader-gui"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">udemy-downloader-gui</a>
-        <a href="LEGAL/index.html"><i class="fa fa-folder-o"></i>LEGAL</a>
-        <a href="DARKNET/index.html"><i class="fa fa-folder-o"></i>DARKNET</a>
-        <hr>
-        <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/CoursesU+002FTutorialU+002FGuides/index.html">Courses/Tutorial/Guides</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://courseclub.me/" target="_blank" title="https://courseclub.me/"><img src="https://external-content.duckduckgo.com/ip3/courseclub.me.ico" alt="favicon">Course&nbsp;Club</a>
+            <a href="https://freecoursesite.com/" target="_blank" title="https://freecoursesite.com/"><img src="https://external-content.duckduckgo.com/ip3/freecoursesite.com.ico" alt="favicon">FreeCourseSite</a>
+            <a href="https://www.freecoursesonline.me/" target="_blank" title="https://www.freecoursesonline.me/"><img src="https://external-content.duckduckgo.com/ip3/www.freecoursesonline.me.ico" alt="favicon">FreeCoursesOnline</a>
+            <a href="https://gigacourse.com/" target="_blank" title="https://gigacourse.com/"><img src="https://external-content.duckduckgo.com/ip3/gigacourse.com.ico" alt="favicon">GigaCourse</a>
+            <a href="https://tut4it.com/" target="_blank" title="https://tut4it.com/"><img src="https://external-content.duckduckgo.com/ip3/tut4it.com.ico" alt="favicon">Tut4DL</a>
+            <a href="https://freetutsdownload.net/" target="_blank" title="https://freetutsdownload.net/"><img src="https://external-content.duckduckgo.com/ip3/freetutsdownload.net.ico" alt="favicon">Free&nbsp;Tutorials&nbsp;Download</a>
+            <a href="https://online-courses.club/" target="_blank" title="https://online-courses.club/"><img src="https://external-content.duckduckgo.com/ip3/online-courses.club.ico" alt="favicon">Online&nbsp;Courses</a>
+            <a href="https://www.discudemy.com/" target="_blank" title="https://www.discudemy.com/"><img src="https://external-content.duckduckgo.com/ip3/www.discudemy.com.ico" alt="favicon">DiscUdemy</a>
+            <a href="https://github.com/FaisalUmair/udemy-downloader-gui" target="_blank" title="https://github.com/FaisalUmair/udemy-downloader-gui"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">udemy-downloader-gui</a>
+            <a href="LEGAL/index.html"><i class="fa fa-folder-o"></i>LEGAL</a>
+            <a href="DARKNET/index.html"><i class="fa fa-folder-o"></i>DARKNET</a>
+            <hr>
+            <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -92,6 +91,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

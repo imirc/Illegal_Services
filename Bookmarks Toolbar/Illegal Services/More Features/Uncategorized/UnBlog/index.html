@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,51 +30,50 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Uncategorized/index.html">Uncategorized</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Uncategorized/UnBlog/index.html">UnBlog</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="http://unfilmpourmatablette.unblog.fr/" target="_blank" title="http://unfilmpourmatablette.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/unfilmpourmatablette.unblog.fr.ico" alt="favicon">UN&nbsp;FILM&nbsp;POUR&nbsp;MA&nbsp;TABLETTE</a>
-        <a href="http://unfilmdenoelpourmatablette.unblog.fr/" target="_blank" title="http://unfilmdenoelpourmatablette.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/unfilmdenoelpourmatablette.unblog.fr.ico" alt="favicon">Un&nbsp;Film&nbsp;De&nbsp;Noel&nbsp;Pour&nbsp;Ma&nbsp;Tablette</a>
-        <a href="http://silklegal5.unblog.fr/" target="_blank" title="http://silklegal5.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/silklegal5.unblog.fr.ico" alt="favicon">Silklegal5</a>
-        <a href="http://rub8pound.unblog.fr/" target="_blank" title="http://rub8pound.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/rub8pound.unblog.fr.ico" alt="favicon">Rub8pound</a>
-        <a href="http://mesdramascoreens.unblog.fr/" target="_blank" title="http://mesdramascoreens.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/mesdramascoreens.unblog.fr.ico" alt="favicon">Mes&nbsp;dramas&nbsp;coréens</a>
-        <a href="http://frenchscriptdoctor.unblog.fr/" target="_blank" title="http://frenchscriptdoctor.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/frenchscriptdoctor.unblog.fr.ico" alt="favicon">French&nbsp;script&nbsp;doctor</a>
-        <a href="http://critiques2radis.unblog.fr/" target="_blank" title="http://critiques2radis.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/critiques2radis.unblog.fr.ico" alt="favicon">Critiques&nbsp;cinéma&nbsp;(pour&nbsp;l&#39;instant)&nbsp;|&nbsp;du&nbsp;Radis&nbsp;Noir&nbsp;masqué&nbsp;!</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Uncategorized/index.html">Uncategorized</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Uncategorized/UnBlog/index.html">UnBlog</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="http://unfilmpourmatablette.unblog.fr/" target="_blank" title="http://unfilmpourmatablette.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/unfilmpourmatablette.unblog.fr.ico" alt="favicon">UN&nbsp;FILM&nbsp;POUR&nbsp;MA&nbsp;TABLETTE</a>
+            <a href="http://unfilmdenoelpourmatablette.unblog.fr/" target="_blank" title="http://unfilmdenoelpourmatablette.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/unfilmdenoelpourmatablette.unblog.fr.ico" alt="favicon">Un&nbsp;Film&nbsp;De&nbsp;Noel&nbsp;Pour&nbsp;Ma&nbsp;Tablette</a>
+            <a href="http://silklegal5.unblog.fr/" target="_blank" title="http://silklegal5.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/silklegal5.unblog.fr.ico" alt="favicon">Silklegal5</a>
+            <a href="http://rub8pound.unblog.fr/" target="_blank" title="http://rub8pound.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/rub8pound.unblog.fr.ico" alt="favicon">Rub8pound</a>
+            <a href="http://mesdramascoreens.unblog.fr/" target="_blank" title="http://mesdramascoreens.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/mesdramascoreens.unblog.fr.ico" alt="favicon">Mes&nbsp;dramas&nbsp;coréens</a>
+            <a href="http://frenchscriptdoctor.unblog.fr/" target="_blank" title="http://frenchscriptdoctor.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/frenchscriptdoctor.unblog.fr.ico" alt="favicon">French&nbsp;script&nbsp;doctor</a>
+            <a href="http://critiques2radis.unblog.fr/" target="_blank" title="http://critiques2radis.unblog.fr/"><img src="https://external-content.duckduckgo.com/ip3/critiques2radis.unblog.fr.ico" alt="favicon">Critiques&nbsp;cinéma&nbsp;(pour&nbsp;l&#39;instant)&nbsp;|&nbsp;du&nbsp;Radis&nbsp;Noir&nbsp;masqué&nbsp;!</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -86,6 +85,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

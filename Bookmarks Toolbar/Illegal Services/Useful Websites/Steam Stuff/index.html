@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,52 +30,51 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Steam%20Stuff/index.html">Steam&nbsp;Stuff</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://xan105.github.io/Achievement-Watcher/" target="_blank" title="https://xan105.github.io/Achievement-Watcher/"><img src="https://external-content.duckduckgo.com/ip3/xan105.github.io.ico" alt="favicon">Achievement&nbsp;Watcher</a>
-        <a href="https://steamworkshopdownloader.io/" target="_blank" title="https://steamworkshopdownloader.io/"><img src="https://external-content.duckduckgo.com/ip3/steamworkshopdownloader.io.ico" alt="favicon">Steam&nbsp;Workshop&nbsp;Downloader</a>
-        <a href="http://steamworkshop.download/" target="_blank" title="http://steamworkshop.download/"><img src="https://external-content.duckduckgo.com/ip3/steamworkshop.download.ico" alt="favicon">SteamWorkshop.download</a>
-        <a href="https://cs.rin.ru/forum/viewtopic.php?f=10&t=112021" target="_blank" title="https://cs.rin.ru/forum/viewtopic.php?f=10&t=112021"><img src="https://external-content.duckduckgo.com/ip3/cs.rin.ru.ico" alt="favicon">CS.RIN.RU&nbsp;-&nbsp;Steam&nbsp;Underground&nbsp;Community&nbsp;•&nbsp;View&nbsp;topic&nbsp;-&nbsp;Koalageddon&nbsp;-&nbsp;Legit&nbsp;Multi-Platform&nbsp;DLC&nbsp;Unlocker</a>
-        <a href="https://github.com/gibbed/SteamAchievementManager" target="_blank" title="https://github.com/gibbed/SteamAchievementManager"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">SteamAchievementManager</a>
-        <a href="https://github.com/xan105/Achievement-Watcher" target="_blank" title="https://github.com/xan105/Achievement-Watcher"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">xan105/Achievement-Watcher:&nbsp;A&nbsp;sexy&nbsp;achievement&nbsp;file&nbsp;parser&nbsp;with&nbsp;real-time&nbsp;notification,&nbsp;automatic&nbsp;screenshot&nbsp;and&nbsp;playtime&nbsp;tracking.&nbsp;View&nbsp;every&nbsp;achievements&nbsp;earned&nbsp;on&nbsp;your&nbsp;PC&nbsp;whether&nbsp;it&#39;s&nbsp;coming&nbsp;from&nbsp;Steam,&nbsp;a&nbsp;Steam&nbsp;emulator,&nbsp;and&nbsp;more.</a>
-        <a href="https://github.com/acidicoala/Koalageddon" target="_blank" title="https://github.com/acidicoala/Koalageddon"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">acidicoala/Koalageddon:&nbsp;Legit&nbsp;DLC&nbsp;Unlocker&nbsp;for&nbsp;Steam,&nbsp;Epic,&nbsp;Origin,&nbsp;EA&nbsp;Desktop&nbsp;&amp;&nbsp;Uplay&nbsp;(R1)</a>
-        <a href="https://github.com/Sak32009/SteamACFGenerator" target="_blank" title="https://github.com/Sak32009/SteamACFGenerator"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">Sak32009/SteamACFGenerator</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/index.html">Useful&nbsp;Websites</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Useful%20Websites/Steam%20Stuff/index.html">Steam&nbsp;Stuff</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://xan105.github.io/Achievement-Watcher/" target="_blank" title="https://xan105.github.io/Achievement-Watcher/"><img src="https://external-content.duckduckgo.com/ip3/xan105.github.io.ico" alt="favicon">Achievement&nbsp;Watcher</a>
+            <a href="https://steamworkshopdownloader.io/" target="_blank" title="https://steamworkshopdownloader.io/"><img src="https://external-content.duckduckgo.com/ip3/steamworkshopdownloader.io.ico" alt="favicon">Steam&nbsp;Workshop&nbsp;Downloader</a>
+            <a href="http://steamworkshop.download/" target="_blank" title="http://steamworkshop.download/"><img src="https://external-content.duckduckgo.com/ip3/steamworkshop.download.ico" alt="favicon">SteamWorkshop.download</a>
+            <a href="https://cs.rin.ru/forum/viewtopic.php?f=10&t=112021" target="_blank" title="https://cs.rin.ru/forum/viewtopic.php?f=10&t=112021"><img src="https://external-content.duckduckgo.com/ip3/cs.rin.ru.ico" alt="favicon">CS.RIN.RU&nbsp;-&nbsp;Steam&nbsp;Underground&nbsp;Community&nbsp;•&nbsp;View&nbsp;topic&nbsp;-&nbsp;Koalageddon&nbsp;-&nbsp;Legit&nbsp;Multi-Platform&nbsp;DLC&nbsp;Unlocker</a>
+            <a href="https://github.com/gibbed/SteamAchievementManager" target="_blank" title="https://github.com/gibbed/SteamAchievementManager"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">SteamAchievementManager</a>
+            <a href="https://github.com/xan105/Achievement-Watcher" target="_blank" title="https://github.com/xan105/Achievement-Watcher"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">xan105/Achievement-Watcher:&nbsp;A&nbsp;sexy&nbsp;achievement&nbsp;file&nbsp;parser&nbsp;with&nbsp;real-time&nbsp;notification,&nbsp;automatic&nbsp;screenshot&nbsp;and&nbsp;playtime&nbsp;tracking.&nbsp;View&nbsp;every&nbsp;achievements&nbsp;earned&nbsp;on&nbsp;your&nbsp;PC&nbsp;whether&nbsp;it&#39;s&nbsp;coming&nbsp;from&nbsp;Steam,&nbsp;a&nbsp;Steam&nbsp;emulator,&nbsp;and&nbsp;more.</a>
+            <a href="https://github.com/acidicoala/Koalageddon" target="_blank" title="https://github.com/acidicoala/Koalageddon"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">acidicoala/Koalageddon:&nbsp;Legit&nbsp;DLC&nbsp;Unlocker&nbsp;for&nbsp;Steam,&nbsp;Epic,&nbsp;Origin,&nbsp;EA&nbsp;Desktop&nbsp;&amp;&nbsp;Uplay&nbsp;(R1)</a>
+            <a href="https://github.com/Sak32009/SteamACFGenerator" target="_blank" title="https://github.com/Sak32009/SteamACFGenerator"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">Sak32009/SteamACFGenerator</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -87,6 +86,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,54 +30,53 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/index.html">Ebooks</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/index.html">SCIENCE</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/PROXIES/index.html">PROXIES</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/PROXIES/Sci-Hub/index.html">Sci-Hub</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://sci-hub.cat/" target="_blank" title="https://sci-hub.cat/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.cat.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://sci-hub.it.nf/" target="_blank" title="https://sci-hub.it.nf/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.it.nf.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://sci-hub.41610.org/" target="_blank" title="https://sci-hub.41610.org/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.41610.org.ico" alt="favicon">Sci-Hub</a>
-        <a href="http://sci-hub.ee/" target="_blank" title="http://sci-hub.ee/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.ee.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://sci-hub.ru/" target="_blank" title="https://sci-hub.ru/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.ru.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://www.sci-hub.ru/" target="_blank" title="https://www.sci-hub.ru/"><img src="https://external-content.duckduckgo.com/ip3/www.sci-hub.ru.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://sci-hub.se/" target="_blank" title="https://sci-hub.se/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.se.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://www.sci-hub.yt/" target="_blank" title="https://www.sci-hub.yt/"><img src="https://external-content.duckduckgo.com/ip3/www.sci-hub.yt.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://sci-hub.live/" target="_blank" title="https://sci-hub.live/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.live.ico" alt="favicon">Sci-Hub</a>
-        <a href="https://www.wikipedia.org/wiki/Sci-Hub" target="_blank" title="https://www.wikipedia.org/wiki/Sci-Hub"><img src="https://external-content.duckduckgo.com/ip3/www.wikipedia.org.ico" alt="favicon">Sci-Hub&nbsp;-&nbsp;Wikipedia</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/index.html">Ebooks</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/index.html">SCIENCE</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/PROXIES/index.html">PROXIES</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/SCIENCE/PROXIES/Sci-Hub/index.html">Sci-Hub</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://sci-hub.cat/" target="_blank" title="https://sci-hub.cat/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.cat.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://sci-hub.it.nf/" target="_blank" title="https://sci-hub.it.nf/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.it.nf.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://sci-hub.41610.org/" target="_blank" title="https://sci-hub.41610.org/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.41610.org.ico" alt="favicon">Sci-Hub</a>
+            <a href="http://sci-hub.ee/" target="_blank" title="http://sci-hub.ee/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.ee.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://sci-hub.ru/" target="_blank" title="https://sci-hub.ru/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.ru.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://www.sci-hub.ru/" target="_blank" title="https://www.sci-hub.ru/"><img src="https://external-content.duckduckgo.com/ip3/www.sci-hub.ru.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://sci-hub.se/" target="_blank" title="https://sci-hub.se/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.se.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://www.sci-hub.yt/" target="_blank" title="https://www.sci-hub.yt/"><img src="https://external-content.duckduckgo.com/ip3/www.sci-hub.yt.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://sci-hub.live/" target="_blank" title="https://sci-hub.live/"><img src="https://external-content.duckduckgo.com/ip3/sci-hub.live.ico" alt="favicon">Sci-Hub</a>
+            <a href="https://www.wikipedia.org/wiki/Sci-Hub" target="_blank" title="https://www.wikipedia.org/wiki/Sci-Hub"><img src="https://external-content.duckduckgo.com/ip3/www.wikipedia.org.ico" alt="favicon">Sci-Hub&nbsp;-&nbsp;Wikipedia</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -89,6 +88,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

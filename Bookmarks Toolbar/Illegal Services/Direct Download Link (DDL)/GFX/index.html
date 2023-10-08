@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,57 +30,56 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Direct%20Download%20Link%20(DDL)/index.html">Direct&nbsp;Download&nbsp;Link&nbsp;(DDL)</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Direct%20Download%20Link%20(DDL)/GFX/index.html">GFX</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://www.gfxtra31.com/" target="_blank" title="https://www.gfxtra31.com/"><img src="https://external-content.duckduckgo.com/ip3/www.gfxtra31.com.ico" alt="favicon">GFxtra</a>
-        <a href="https://gfx-hub.cc/" target="_blank" title="https://gfx-hub.cc/"><img src="https://external-content.duckduckgo.com/ip3/gfx-hub.cc.ico" alt="favicon">GFX-HUB</a>
-        <a href="https://prodesigntools.com/" target="_blank" title="https://prodesigntools.com/"><img src="https://external-content.duckduckgo.com/ip3/prodesigntools.com.ico" alt="favicon">ProDesignTools</a>
-        <a href="https://psdkeys.com/" target="_blank" title="https://psdkeys.com/"><img src="https://external-content.duckduckgo.com/ip3/psdkeys.com.ico" alt="favicon">PSDkeys</a>
-        <a href="https://shareae.com/" target="_blank" title="https://shareae.com/"><img src="https://external-content.duckduckgo.com/ip3/shareae.com.ico" alt="favicon">ShareAE</a>
-        <a href="https://cgispread.com/" target="_blank" title="https://cgispread.com/"><img src="https://external-content.duckduckgo.com/ip3/cgispread.com.ico" alt="favicon">CGIspread</a>
-        <a href="https://graphicex.com/" target="_blank" title="https://graphicex.com/"><img src="https://external-content.duckduckgo.com/ip3/graphicex.com.ico" alt="favicon">graphicex</a>
-        <a href="http://gfxdownload.com/" target="_blank" title="http://gfxdownload.com/"><img src="https://external-content.duckduckgo.com/ip3/gfxdownload.com.ico" alt="favicon">gfxdownload</a>
-        <a href="https://www.freeimages.com/psd?ref=365psd" target="_blank" title="https://www.freeimages.com/psd?ref=365psd"><img src="https://external-content.duckduckgo.com/ip3/www.freeimages.com.ico" alt="favicon">FreeImages</a>
-        <a href="https://aedownload.com/" target="_blank" title="https://aedownload.com/"><img src="https://external-content.duckduckgo.com/ip3/aedownload.com.ico" alt="favicon">Aedownload</a>
-        <a href="https://aedownloadpro.com/" target="_blank" title="https://aedownloadpro.com/"><img src="https://external-content.duckduckgo.com/ip3/aedownloadpro.com.ico" alt="favicon">Aedownloadpro</a>
-        <a href="https://all-free-download.com/" target="_blank" title="https://all-free-download.com/"><img src="https://external-content.duckduckgo.com/ip3/all-free-download.com.ico" alt="favicon">all-free-download</a>
-        <a href="https://www.downloadpirate.com/" target="_blank" title="https://www.downloadpirate.com/"><img src="https://external-content.duckduckgo.com/ip3/www.downloadpirate.com.ico" alt="favicon">Download&nbsp;Pirate</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Direct%20Download%20Link%20(DDL)/index.html">Direct&nbsp;Download&nbsp;Link&nbsp;(DDL)</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Direct%20Download%20Link%20(DDL)/GFX/index.html">GFX</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://www.gfxtra31.com/" target="_blank" title="https://www.gfxtra31.com/"><img src="https://external-content.duckduckgo.com/ip3/www.gfxtra31.com.ico" alt="favicon">GFxtra</a>
+            <a href="https://gfx-hub.cc/" target="_blank" title="https://gfx-hub.cc/"><img src="https://external-content.duckduckgo.com/ip3/gfx-hub.cc.ico" alt="favicon">GFX-HUB</a>
+            <a href="https://prodesigntools.com/" target="_blank" title="https://prodesigntools.com/"><img src="https://external-content.duckduckgo.com/ip3/prodesigntools.com.ico" alt="favicon">ProDesignTools</a>
+            <a href="https://psdkeys.com/" target="_blank" title="https://psdkeys.com/"><img src="https://external-content.duckduckgo.com/ip3/psdkeys.com.ico" alt="favicon">PSDkeys</a>
+            <a href="https://shareae.com/" target="_blank" title="https://shareae.com/"><img src="https://external-content.duckduckgo.com/ip3/shareae.com.ico" alt="favicon">ShareAE</a>
+            <a href="https://cgispread.com/" target="_blank" title="https://cgispread.com/"><img src="https://external-content.duckduckgo.com/ip3/cgispread.com.ico" alt="favicon">CGIspread</a>
+            <a href="https://graphicex.com/" target="_blank" title="https://graphicex.com/"><img src="https://external-content.duckduckgo.com/ip3/graphicex.com.ico" alt="favicon">graphicex</a>
+            <a href="http://gfxdownload.com/" target="_blank" title="http://gfxdownload.com/"><img src="https://external-content.duckduckgo.com/ip3/gfxdownload.com.ico" alt="favicon">gfxdownload</a>
+            <a href="https://www.freeimages.com/psd?ref=365psd" target="_blank" title="https://www.freeimages.com/psd?ref=365psd"><img src="https://external-content.duckduckgo.com/ip3/www.freeimages.com.ico" alt="favicon">FreeImages</a>
+            <a href="https://aedownload.com/" target="_blank" title="https://aedownload.com/"><img src="https://external-content.duckduckgo.com/ip3/aedownload.com.ico" alt="favicon">Aedownload</a>
+            <a href="https://aedownloadpro.com/" target="_blank" title="https://aedownloadpro.com/"><img src="https://external-content.duckduckgo.com/ip3/aedownloadpro.com.ico" alt="favicon">Aedownloadpro</a>
+            <a href="https://all-free-download.com/" target="_blank" title="https://all-free-download.com/"><img src="https://external-content.duckduckgo.com/ip3/all-free-download.com.ico" alt="favicon">all-free-download</a>
+            <a href="https://www.downloadpirate.com/" target="_blank" title="https://www.downloadpirate.com/"><img src="https://external-content.duckduckgo.com/ip3/www.downloadpirate.com.ico" alt="favicon">Download&nbsp;Pirate</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -92,6 +91,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

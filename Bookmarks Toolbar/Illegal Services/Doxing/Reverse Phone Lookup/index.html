@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,58 +30,57 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/index.html">Doxing</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/Reverse%20Phone%20Lookup/index.html">Reverse&nbsp;Phone&nbsp;Lookup</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://www.truecaller.com/reverse-phone-number-lookup" target="_blank" title="https://www.truecaller.com/reverse-phone-number-lookup"><img src="https://external-content.duckduckgo.com/ip3/www.truecaller.com.ico" alt="favicon">Truecaller</a>
-        <a href="https://www.truecaller.com/" target="_blank" title="https://www.truecaller.com/"><img src="https://external-content.duckduckgo.com/ip3/www.truecaller.com.ico" alt="favicon">Truecaller</a>
-        <a href="https://www.thisnumber.com/" target="_blank" title="https://www.thisnumber.com/"><img src="https://external-content.duckduckgo.com/ip3/www.thisnumber.com.ico" alt="favicon">ThisNumber</a>
-        <a href="https://www.spydialer.com/" target="_blank" title="https://www.spydialer.com/"><img src="https://external-content.duckduckgo.com/ip3/www.spydialer.com.ico" alt="favicon">Spy&nbsp;Dialer</a>
-        <a href="https://iplogger.org/FindLocationbyPhoneNumber/" target="_blank" title="https://iplogger.org/FindLocationbyPhoneNumber/"><img src="https://external-content.duckduckgo.com/ip3/iplogger.org.ico" alt="favicon">IP&nbsp;LOGGER</a>
-        <a href="https://webresolver.nl/tools/phone" target="_blank" title="https://webresolver.nl/tools/phone"><img src="https://external-content.duckduckgo.com/ip3/webresolver.nl.ico" alt="favicon">WebResolver</a>
-        <a href="https://xresolver.com/phone" target="_blank" title="https://xresolver.com/phone"><img src="https://external-content.duckduckgo.com/ip3/xresolver.com.ico" alt="favicon">xResolver</a>
-        <a href="https://sms.sellaite.com/index_smssend.php?cmd=whosender" target="_blank" title="https://sms.sellaite.com/index_smssend.php?cmd=whosender"><img src="https://external-content.duckduckgo.com/ip3/sms.sellaite.com.ico" alt="favicon">SELLAITE</a>
-        <a href="https://freecarrierlookup.com/" target="_blank" title="https://freecarrierlookup.com/"><img src="https://external-content.duckduckgo.com/ip3/freecarrierlookup.com.ico" alt="favicon">FreeCarrierLookup</a>
-        <a href="https://demo.phoneinfoga.crvx.fr/#/" target="_blank" title="https://demo.phoneinfoga.crvx.fr/#/"><img src="https://external-content.duckduckgo.com/ip3/demo.phoneinfoga.crvx.fr.ico" alt="favicon">PhoneInfoga</a>
-        <a href="https://github.com/sundowndev/phoneinfoga" target="_blank" title="https://github.com/sundowndev/phoneinfoga"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">sundowndev/phoneinfoga:&nbsp;Information&nbsp;gathering&nbsp;framework&nbsp;for&nbsp;phone&nbsp;numbers</a>
-        <hr>
-        <a href="%5BUS%5D/index.html"><i class="fa fa-folder-o"></i>[US]</a>
-        <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/index.html">Doxing</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Doxing/Reverse%20Phone%20Lookup/index.html">Reverse&nbsp;Phone&nbsp;Lookup</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://www.truecaller.com/reverse-phone-number-lookup" target="_blank" title="https://www.truecaller.com/reverse-phone-number-lookup"><img src="https://external-content.duckduckgo.com/ip3/www.truecaller.com.ico" alt="favicon">Truecaller</a>
+            <a href="https://www.truecaller.com/" target="_blank" title="https://www.truecaller.com/"><img src="https://external-content.duckduckgo.com/ip3/www.truecaller.com.ico" alt="favicon">Truecaller</a>
+            <a href="https://www.thisnumber.com/" target="_blank" title="https://www.thisnumber.com/"><img src="https://external-content.duckduckgo.com/ip3/www.thisnumber.com.ico" alt="favicon">ThisNumber</a>
+            <a href="https://www.spydialer.com/" target="_blank" title="https://www.spydialer.com/"><img src="https://external-content.duckduckgo.com/ip3/www.spydialer.com.ico" alt="favicon">Spy&nbsp;Dialer</a>
+            <a href="https://iplogger.org/FindLocationbyPhoneNumber/" target="_blank" title="https://iplogger.org/FindLocationbyPhoneNumber/"><img src="https://external-content.duckduckgo.com/ip3/iplogger.org.ico" alt="favicon">IP&nbsp;LOGGER</a>
+            <a href="https://webresolver.nl/tools/phone" target="_blank" title="https://webresolver.nl/tools/phone"><img src="https://external-content.duckduckgo.com/ip3/webresolver.nl.ico" alt="favicon">WebResolver</a>
+            <a href="https://xresolver.com/phone" target="_blank" title="https://xresolver.com/phone"><img src="https://external-content.duckduckgo.com/ip3/xresolver.com.ico" alt="favicon">xResolver</a>
+            <a href="https://sms.sellaite.com/index_smssend.php?cmd=whosender" target="_blank" title="https://sms.sellaite.com/index_smssend.php?cmd=whosender"><img src="https://external-content.duckduckgo.com/ip3/sms.sellaite.com.ico" alt="favicon">SELLAITE</a>
+            <a href="https://freecarrierlookup.com/" target="_blank" title="https://freecarrierlookup.com/"><img src="https://external-content.duckduckgo.com/ip3/freecarrierlookup.com.ico" alt="favicon">FreeCarrierLookup</a>
+            <a href="https://demo.phoneinfoga.crvx.fr/#/" target="_blank" title="https://demo.phoneinfoga.crvx.fr/#/"><img src="https://external-content.duckduckgo.com/ip3/demo.phoneinfoga.crvx.fr.ico" alt="favicon">PhoneInfoga</a>
+            <a href="https://github.com/sundowndev/phoneinfoga" target="_blank" title="https://github.com/sundowndev/phoneinfoga"><img src="https://external-content.duckduckgo.com/ip3/github.com.ico" alt="favicon">sundowndev/phoneinfoga:&nbsp;Information&nbsp;gathering&nbsp;framework&nbsp;for&nbsp;phone&nbsp;numbers</a>
+            <hr>
+            <a href="%5BUS%5D/index.html"><i class="fa fa-folder-o"></i>[US]</a>
+            <a href="%5BFR%5D/index.html"><i class="fa fa-folder-o"></i>[FR]</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -93,6 +92,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

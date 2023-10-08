@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,54 +30,53 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/index.html">Ebooks</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/%5BFR%5D/index.html">[FR]</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/%5BFR%5D/LEGAL/index.html">LEGAL</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://www.bnf.fr/" target="_blank" title="https://www.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/www.bnf.fr.ico" alt="favicon">BnF</a>
-        <a href="https://ccfr.bnf.fr/portailccfr/jsp/public/index.jsp" target="_blank" title="https://ccfr.bnf.fr/portailccfr/jsp/public/index.jsp"><img src="https://external-content.duckduckgo.com/ip3/ccfr.bnf.fr.ico" alt="favicon">BnF&nbsp;Catalogue&nbsp;collectif&nbsp;de&nbsp;France&nbsp;(CCFr)</a>
-        <a href="https://data.bnf.fr/" target="_blank" title="https://data.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/data.bnf.fr.ico" alt="favicon">BnF&nbsp;Data</a>
-        <a href="https://gallica.bnf.fr/" target="_blank" title="https://gallica.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/gallica.bnf.fr.ico" alt="favicon">BnF&nbsp;Gallica</a>
-        <a href="https://catalogue.bnf.fr/index.do" target="_blank" title="https://catalogue.bnf.fr/index.do"><img src="https://external-content.duckduckgo.com/ip3/catalogue.bnf.fr.ico" alt="favicon">BnF&nbsp;Catalogue&nbsp;général</a>
-        <a href="https://archivesetmanuscrits.bnf.fr/" target="_blank" title="https://archivesetmanuscrits.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/archivesetmanuscrits.bnf.fr.ico" alt="favicon">BnF&nbsp;Archives&nbsp;et&nbsp;manuscrits</a>
-        <a href="https://medaillesetantiques.bnf.fr/ws/catalogue/app/report/index.html" target="_blank" title="https://medaillesetantiques.bnf.fr/ws/catalogue/app/report/index.html"><img src="https://external-content.duckduckgo.com/ip3/medaillesetantiques.bnf.fr.ico" alt="favicon">BnF&nbsp;Médailles&nbsp;et&nbsp;Antiques</a>
-        <a href="https://www.ebooksgratuits.com/" target="_blank" title="https://www.ebooksgratuits.com/"><img src="https://external-content.duckduckgo.com/ip3/www.ebooksgratuits.com.ico" alt="favicon">Ebooks&nbsp;libres&nbsp;et&nbsp;gratuits</a>
-        <a href="https://ebooks-bnr.tumblr.com/" target="_blank" title="https://ebooks-bnr.tumblr.com/"><img src="https://external-content.duckduckgo.com/ip3/ebooks-bnr.tumblr.com.ico" alt="favicon">Bibliothèque&nbsp;numérique&nbsp;romande</a>
-        <a href="PROXIES/index.html"><i class="fa fa-folder-o"></i>PROXIES</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/index.html">More&nbsp;Features</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/index.html">Ebooks</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/%5BFR%5D/index.html">[FR]</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/More%20Features/Ebooks/%5BFR%5D/LEGAL/index.html">LEGAL</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://www.bnf.fr/" target="_blank" title="https://www.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/www.bnf.fr.ico" alt="favicon">BnF</a>
+            <a href="https://ccfr.bnf.fr/portailccfr/jsp/public/index.jsp" target="_blank" title="https://ccfr.bnf.fr/portailccfr/jsp/public/index.jsp"><img src="https://external-content.duckduckgo.com/ip3/ccfr.bnf.fr.ico" alt="favicon">BnF&nbsp;Catalogue&nbsp;collectif&nbsp;de&nbsp;France&nbsp;(CCFr)</a>
+            <a href="https://data.bnf.fr/" target="_blank" title="https://data.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/data.bnf.fr.ico" alt="favicon">BnF&nbsp;Data</a>
+            <a href="https://gallica.bnf.fr/" target="_blank" title="https://gallica.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/gallica.bnf.fr.ico" alt="favicon">BnF&nbsp;Gallica</a>
+            <a href="https://catalogue.bnf.fr/index.do" target="_blank" title="https://catalogue.bnf.fr/index.do"><img src="https://external-content.duckduckgo.com/ip3/catalogue.bnf.fr.ico" alt="favicon">BnF&nbsp;Catalogue&nbsp;général</a>
+            <a href="https://archivesetmanuscrits.bnf.fr/" target="_blank" title="https://archivesetmanuscrits.bnf.fr/"><img src="https://external-content.duckduckgo.com/ip3/archivesetmanuscrits.bnf.fr.ico" alt="favicon">BnF&nbsp;Archives&nbsp;et&nbsp;manuscrits</a>
+            <a href="https://medaillesetantiques.bnf.fr/ws/catalogue/app/report/index.html" target="_blank" title="https://medaillesetantiques.bnf.fr/ws/catalogue/app/report/index.html"><img src="https://external-content.duckduckgo.com/ip3/medaillesetantiques.bnf.fr.ico" alt="favicon">BnF&nbsp;Médailles&nbsp;et&nbsp;Antiques</a>
+            <a href="https://www.ebooksgratuits.com/" target="_blank" title="https://www.ebooksgratuits.com/"><img src="https://external-content.duckduckgo.com/ip3/www.ebooksgratuits.com.ico" alt="favicon">Ebooks&nbsp;libres&nbsp;et&nbsp;gratuits</a>
+            <a href="https://ebooks-bnr.tumblr.com/" target="_blank" title="https://ebooks-bnr.tumblr.com/"><img src="https://external-content.duckduckgo.com/ip3/ebooks-bnr.tumblr.com.ico" alt="favicon">Bibliothèque&nbsp;numérique&nbsp;romande</a>
+            <a href="PROXIES/index.html"><i class="fa fa-folder-o"></i>PROXIES</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -89,6 +88,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

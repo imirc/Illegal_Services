@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,52 +30,51 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/index.html">IP&nbsp;Loggers</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/URL%20Shortners/index.html">URL&nbsp;Shortners</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/URL%20Shortners/REGISTRATION%20REQUIERED/index.html">REGISTRATION&nbsp;REQUIERED</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="http://go.hawaii.edu/" target="_blank" title="http://go.hawaii.edu/"><img src="https://external-content.duckduckgo.com/ip3/go.hawaii.edu.ico" alt="favicon">go.hawaii.edu</a>
-        <a href="https://go.osu.edu/" target="_blank" title="https://go.osu.edu/"><img src="https://external-content.duckduckgo.com/ip3/go.osu.edu.ico" alt="favicon">go.osu.edu</a>
-        <a href="https://qt.catbox.moe/" target="_blank" title="https://qt.catbox.moe/"><img src="https://external-content.duckduckgo.com/ip3/qt.catbox.moe.ico" alt="favicon">Catbox</a>
-        <a href="https://s.uconn.edu/" target="_blank" title="https://s.uconn.edu/"><img src="https://external-content.duckduckgo.com/ip3/s.uconn.edu.ico" alt="favicon">s.uconn.edu</a>
-        <a href="https://waa.ai/" target="_blank" title="https://waa.ai/"><img src="https://external-content.duckduckgo.com/ip3/waa.ai.ico" alt="favicon">Akari</a>
-        <a href="http://zurl.ws/" target="_blank" title="http://zurl.ws/"><img src="https://external-content.duckduckgo.com/ip3/zurl.ws.ico" alt="favicon">zURL</a>
-        <a href="http://url.ie/" target="_blank" title="http://url.ie/"><img src="https://external-content.duckduckgo.com/ip3/url.ie.ico" alt="favicon">URL.ie</a>
-        <a href="https://www.vzturl.com/" target="_blank" title="https://www.vzturl.com/"><img src="https://external-content.duckduckgo.com/ip3/www.vzturl.com.ico" alt="favicon">VztURL</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/index.html">IP&nbsp;Loggers</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/URL%20Shortners/index.html">URL&nbsp;Shortners</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/IP%20Loggers/URL%20Shortners/REGISTRATION%20REQUIERED/index.html">REGISTRATION&nbsp;REQUIERED</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="http://go.hawaii.edu/" target="_blank" title="http://go.hawaii.edu/"><img src="https://external-content.duckduckgo.com/ip3/go.hawaii.edu.ico" alt="favicon">go.hawaii.edu</a>
+            <a href="https://go.osu.edu/" target="_blank" title="https://go.osu.edu/"><img src="https://external-content.duckduckgo.com/ip3/go.osu.edu.ico" alt="favicon">go.osu.edu</a>
+            <a href="https://qt.catbox.moe/" target="_blank" title="https://qt.catbox.moe/"><img src="https://external-content.duckduckgo.com/ip3/qt.catbox.moe.ico" alt="favicon">Catbox</a>
+            <a href="https://s.uconn.edu/" target="_blank" title="https://s.uconn.edu/"><img src="https://external-content.duckduckgo.com/ip3/s.uconn.edu.ico" alt="favicon">s.uconn.edu</a>
+            <a href="https://waa.ai/" target="_blank" title="https://waa.ai/"><img src="https://external-content.duckduckgo.com/ip3/waa.ai.ico" alt="favicon">Akari</a>
+            <a href="http://zurl.ws/" target="_blank" title="http://zurl.ws/"><img src="https://external-content.duckduckgo.com/ip3/zurl.ws.ico" alt="favicon">zURL</a>
+            <a href="http://url.ie/" target="_blank" title="http://url.ie/"><img src="https://external-content.duckduckgo.com/ip3/url.ie.ico" alt="favicon">URL.ie</a>
+            <a href="https://www.vzturl.com/" target="_blank" title="https://www.vzturl.com/"><img src="https://external-content.duckduckgo.com/ip3/www.vzturl.com.ico" alt="favicon">VztURL</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -87,6 +86,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>

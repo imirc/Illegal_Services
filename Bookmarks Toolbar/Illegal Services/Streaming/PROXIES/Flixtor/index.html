@@ -12,7 +12,7 @@
     <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
     <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-    <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -30,59 +30,58 @@
 
     <div class="search-or-request-container">
         <div class="search-or-request">
-            <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="search_link">Search a link or folder in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                    <input type="submit" value="Search">
-                </h4>
-            </form>
+            <h4>Search a link or folder in IS database:
+                <br>
+                <br>
+                <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                <button type="submit" id="search-link-button">Search</button>
+            </h4>
         </div>
         <div class="search-or-request">
-            <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                <h4>
-                    <label for="request_link">Request a link to be added in IS database:</label>
-                    <br>
-                    <br>
-                    <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                    <input type="submit" value="Request">
-                </h4>
-            </form>
+            <h4>Request a link to be added in IS database:
+                <br>
+                <br>
+                <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                <button type="submit" id="request-link-button">Request</button>
+            </h4>
         </div>
     </div>
 
-    <div class="pathbar notranslate">
-        <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/index.html">Streaming</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/PROXIES/index.html">PROXIES</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/PROXIES/Flixtor/index.html">Flixtor</a> > index.html
-    </div>
-
-    <div class="vertical-menu notranslate">
-        <a href="https://flixtor.org/" target="_blank" title="https://flixtor.org/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.org.ico" alt="favicon">flixtor.org</a>
-        <hr>
-        <a href="https://flixtor.se/" target="_blank" title="https://flixtor.se/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.se.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.vc/" target="_blank" title="https://flixtor.vc/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.vc.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.it/" target="_blank" title="https://flixtor.it/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.it.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.nu/" target="_blank" title="https://flixtor.nu/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.nu.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.gy/" target="_blank" title="https://flixtor.gy/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.gy.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.fm/" target="_blank" title="https://flixtor.fm/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.fm.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.bz/" target="_blank" title="https://flixtor.bz/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.bz.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.fi/" target="_blank" title="https://flixtor.fi/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.fi.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.gd/" target="_blank" title="https://flixtor.gd/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.gd.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.si/" target="_blank" title="https://flixtor.si/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.si.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.tk/" target="_blank" title="https://flixtor.tk/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.tk.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.sx/" target="_blank" title="https://flixtor.sx/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.sx.ico" alt="favicon">Flixtor</a>
-        <a href="https://flixtor.ch/" target="_blank" title="https://flixtor.ch/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.ch.ico" alt="favicon">Flixtor</a>
-    </div>
-
-    <script src="/Illegal_Services/js/counter.js"></script>
-    <noscript>
-        <div class="javascript-disabled">
-            <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-            JavaScript disabled in your browser;<br>
-            can't display the counter informations.
+    <div id="is-bookmarks-dynamic-container" class="navigation">
+        <div class="pathbar notranslate">
+            <a href="/Illegal_Services/Bookmarks%20Toolbar/index.html">Bookmarks&nbsp;Toolbar</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/index.html">Illegal&nbsp;Services</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/index.html">Streaming</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/PROXIES/index.html">PROXIES</a> > <a href="/Illegal_Services/Bookmarks%20Toolbar/Illegal%20Services/Streaming/PROXIES/Flixtor/index.html">Flixtor</a> > index.html
         </div>
-    </noscript>
+
+        <div class="vertical-menu notranslate">
+            <a href="https://flixtor.org/" target="_blank" title="https://flixtor.org/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.org.ico" alt="favicon">flixtor.org</a>
+            <hr>
+            <a href="https://flixtor.se/" target="_blank" title="https://flixtor.se/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.se.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.vc/" target="_blank" title="https://flixtor.vc/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.vc.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.it/" target="_blank" title="https://flixtor.it/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.it.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.nu/" target="_blank" title="https://flixtor.nu/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.nu.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.gy/" target="_blank" title="https://flixtor.gy/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.gy.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.fm/" target="_blank" title="https://flixtor.fm/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.fm.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.bz/" target="_blank" title="https://flixtor.bz/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.bz.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.fi/" target="_blank" title="https://flixtor.fi/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.fi.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.gd/" target="_blank" title="https://flixtor.gd/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.gd.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.si/" target="_blank" title="https://flixtor.si/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.si.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.tk/" target="_blank" title="https://flixtor.tk/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.tk.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.sx/" target="_blank" title="https://flixtor.sx/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.sx.ico" alt="favicon">Flixtor</a>
+            <a href="https://flixtor.ch/" target="_blank" title="https://flixtor.ch/"><img src="https://external-content.duckduckgo.com/ip3/flixtor.ch.ico" alt="favicon">Flixtor</a>
+        </div>
+
+        <div class="counter">
+            <script src="/Illegal_Services/js/counter.js"></script>
+            <noscript>
+                <div class="javascript-disabled">
+                    <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                    JavaScript disabled in your browser;<br>
+                    can't display the counter informations.
+                </div>
+            </noscript>
+        </div>
+
+    </div>
 
     <footer>
         <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -94,6 +93,7 @@
     </footer>
 
     <script src="/Illegal_Services/js/translations.js"></script>
+    <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
 </body>
 
 </html>
