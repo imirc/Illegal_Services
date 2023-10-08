@@ -138,7 +138,7 @@ def write_html_header() -> None:
                 <link rel="icon" href="/Illegal_Services/icons/favicon.ico" type="image/x-icon">
                 <link rel="stylesheet" href="/Illegal_Services/css/styles.css">
                 <link rel="stylesheet" href="/Illegal_Services/css/is_bookmarks.css">
-                <link rel="stylesheet" href="/Illegal_Services/font-awesome-4.7.0/css/font-awesome.min.css">
+                <link rel="stylesheet" href="/Illegal_Services/plugins/font-awesome-4.7.0/css/font-awesome.min.css">
             </head>
 
             <body>
@@ -156,34 +156,29 @@ def write_html_header() -> None:
 
                 <div class="search-or-request-container">
                     <div class="search-or-request">
-                        <form action="https://eofo904128t6ry8.m.pipedream.net/" method="post" target="_blank">
-                            <h4>
-                                <label for="search_link">Search a link or folder in IS database:</label>
-                                <br>
-                                <br>
-                                <input type="text" name="search_link" id="search_link" placeholder="https://example.com/">
-                                <input type="submit" value="Search">
-                            </h4>
-                        </form>
+                        <h4>Search a link or folder in IS database:
+                            <br>
+                            <br>
+                            <input type="text" name="search_link" id="search-link-input" placeholder="https://example.com/">
+                            <button type="submit" id="search-link-button">Search</button>
+                        </h4>
                     </div>
                     <div class="search-or-request">
-                        <form action="https://eolu77sciiyyni6.m.pipedream.net/" method="post" target="_blank">
-                            <h4>
-                                <label for="request_link">Request a link to be added in IS database:</label>
-                                <br>
-                                <br>
-                                <input type="text" name="request_link" id="request_link" placeholder="https://example.com/">
-                                <input type="submit" value="Request">
-                            </h4>
-                        </form>
+                        <h4>Request a link to be added in IS database:
+                            <br>
+                            <br>
+                            <input type="text" name="request_link" id="request-link-input" placeholder="https://example.com/">
+                            <button type="submit" id="request-link-button">Request</button>
+                        </h4>
                     </div>
                 </div>
 
-                <div class="pathbar notranslate">
-                    {display_pathbar}
-                </div>
+                <div id="is-bookmarks-dynamic-container" class="navigation">
+                    <div class="pathbar notranslate">
+                        {display_pathbar}
+                    </div>
 
-                <div class="vertical-menu notranslate">
+                    <div class="vertical-menu notranslate">
         """
         text = textwrap.dedent(text).removeprefix("\n")
         file.write(text)
@@ -200,16 +195,20 @@ def write_html_header() -> None:
 def write_footer() -> None:
     with open(windows_href_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
         text = """
-                </div>
-
-                <script src="/Illegal_Services/js/counter.js"></script>
-                <noscript>
-                    <div class="javascript-disabled">
-                        <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
-                        JavaScript disabled in your browser;<br>
-                        can't display the counter informations.
                     </div>
-                </noscript>
+
+                    <div class="counter">
+                        <script src="/Illegal_Services/js/counter.js"></script>
+                        <noscript>
+                            <div class="javascript-disabled">
+                                <img src="/Illegal_Services/icons/no_js.png" alt="no_js.png">
+                                JavaScript disabled in your browser;<br>
+                                can't display the counter informations.
+                            </div>
+                        </noscript>
+                    </div>
+
+                </div>
 
                 <footer>
                     <a href="https://illegal-services.github.io/Illegal_Services/" target="_blank"><img src="/Illegal_Services/svgs/internet.svg" alt="Website" title="https://illegal-services.github.io/Illegal_Services/"></a>
@@ -221,6 +220,7 @@ def write_footer() -> None:
                 </footer>
 
                 <script src="/Illegal_Services/js/translations.js"></script>
+                <script src="/Illegal_Services/js/ISbookmarks.js" type="module"></script>
             </body>
 
             </html>
@@ -309,7 +309,7 @@ for bookmark in bookmarks_db:
             bookmark_link_title__html_text = bookmark_link_title__text
 
         with open(bookmark_path__windows_index_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
-            file.write(f'        <a href="{bookmark_link}" target="_blank" title="{bookmark_link}"><img src="https://external-content.duckduckgo.com/ip3/{bookmark_link_hostname}.ico" alt="favicon">{bookmark_link_title__html_text}</a>\n')
+            file.write(f'            <a href="{bookmark_link}" target="_blank" title="{bookmark_link}"><img src="https://external-content.duckduckgo.com/ip3/{bookmark_link_hostname}.ico" alt="favicon">{bookmark_link_title__html_text}</a>\n')
             file.close()
         if not (bookmark_path__windows_index_path__path.exists() and bookmark_path__windows_index_path__path.is_file()):
             print(f'ERROR (WRITE_LINK_INDEX): "{bookmark_link}" "{bookmark_folder__text}" "{bookmark_link_title__text}"')
@@ -321,7 +321,7 @@ for bookmark in bookmarks_db:
         bookmark_folder__href = f"{encode_url_encoding(encode_unicode_encoding(decode_html_entity_encoding(bookmark_folder), 'folder'))}/index.html"
         bookmark_folder__text = encode_html_entity_encoding(decode_html_entity_encoding(bookmark_folder))
         with open(bookmark_path__windows_index_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
-            file.write(f'        <a href="{bookmark_folder__href}"><i class="fa fa-folder-o"></i>{bookmark_folder__text}</a>\n')
+            file.write(f'            <a href="{bookmark_folder__href}"><i class="fa fa-folder-o"></i>{bookmark_folder__text}</a>\n')
             file.close()
         if not (bookmark_path__windows_index_path__path.exists() and bookmark_path__windows_index_path__path.is_file()):
             print(f'ERROR (WRITE_PATH_INDEX): "{bookmark_folder__href}" "{bookmark_folder__text}"')
@@ -330,7 +330,7 @@ for bookmark in bookmarks_db:
 
     elif bookmark_type == "HR":
         with open(bookmark_path__windows_index_path__str, "a+", encoding="utf-8", newline="\r\n") as file:
-            file.write("        <hr>\n")
+            file.write("            <hr>\n")
             file.close()
         if not (bookmark_path__windows_index_path__path.exists() and bookmark_path__windows_index_path__path.is_file()):
             print(f'ERROR (WRITE_HR_INDEX): "{bookmark_path__windows_index_path__str}"')
@@ -341,7 +341,7 @@ for bookmark in bookmarks_db:
         input()
         exit(0)
 
-folder_path = Path("Bookmarks Toolbar")
+folder_path = Path(R"Bookmarks Toolbar")
 for file_path in folder_path.glob("**/*.html"):
     if not (file_path.exists() and file_path.is_file()):
         continue
@@ -351,18 +351,10 @@ for file_path in folder_path.glob("**/*.html"):
     if windows_href_path__str:
         write_footer()
 
-js_conter__path = Path("js\counter.js")
+js_conter__path = Path(R"js/counter.js")
 create_folder_or_path(js_conter__path.parent.resolve())
-with open("js\counter.js", "w", encoding="utf-8") as file:
-    text = f"""
-        document.write(`
-            <div class="counter">
-                Updated: {datetime.date.today().strftime("%d/%m/%Y")}&nbsp;&nbsp;|&nbsp;&nbsp;{links_counter} links indexed.
-            </div>
-        `);
-    """
-    text = textwrap.dedent(text).removeprefix("\n")
-    file.write(text)
+with open(R"js/counter.js", "w", encoding="utf-8") as file:
+    file.write(f'document.write("Updated: {datetime.date.today().strftime("%d/%m/%Y")}&nbsp;&nbsp;|&nbsp;&nbsp;{links_counter} links indexed.")')
     file.close()
 if not (js_conter__path.exists() and js_conter__path.is_file()):
     print(f'ERROR (write_js_conter): "{bookmark_path__windows_index_path__path}"')
