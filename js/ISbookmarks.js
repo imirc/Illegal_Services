@@ -23,9 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   async function handleSearch() {
 
-    const search = htmlSearchLinkInput.value;
-    const sanitized = DOMPurify.sanitize(search, { USE_PROFILES: { html: true } });
-    const formatedUserSearch = sanitized.toLowerCase();
+    const userSearch = htmlSearchLinkInput.value;
+    const sanitizedUserSearch = DOMPurify.sanitize(userSearch, { USE_PROFILES: { html: true } });
+    const formatedUserSearch = stripNewlinesAndWhitespace(sanitizedUserSearch);
+    const formatedUserSearchLowerCase = formatedUserSearch.toLowerCase();
 
     const bookmarkDb = await fetchISdatabase();
 
@@ -38,14 +39,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     await processDatabase(bookmarkDb, entry => {
       if (entry.type === 'FOLDER') {
-        if (entry.title.toLowerCase().includes(formatedUserSearch)) {
+        if (entry.title.toLowerCase().includes(formatedUserSearchLowerCase)) {
           foldersResults.push({
             path: formatPathLink(entry.path.slice(0, -1)),
             title: entry.title
           });
         }
       } else if (entry.type === 'LINK') {
-        if (entry.title.toLowerCase().includes(formatedUserSearch) || entry.url.toLowerCase().includes(formatedUserSearch)) {
+        if (entry.title.toLowerCase().includes(formatedUserSearchLowerCase) || entry.url.toLowerCase().includes(formatedUserSearchLowerCase)) {
           linksResults.push({
             path: formatPathLink(entry.path),
             title: entry.title,
@@ -140,9 +141,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
   async function handleRequest() {
 
+    function formatUserInputToURL(userInput) {
+      if (userInput.startsWith("http://") || userInput.startsWith("https://")) {
+        return userInput;
+      } else {
+        return `http://${userInput}`;
+      }
+    }
+
     const userRequest = htmlRequestLinkInput.value;
     const sanitizedUserRequest = DOMPurify.sanitize(userRequest, { USE_PROFILES: { html: true } });
-    const formatedUserRequest = sanitizedUserRequest.toLowerCase();
+    const formatedUserRequest = stripNewlinesAndWhitespace(sanitizedUserRequest);
+    const formatedUserRequestLowerCase = formatedUserRequest.toLowerCase();
+    const formatedUserRequestLink = formatUserInputToURL(formatedUserRequest);
 
     const bookmarkDb = await fetchISdatabase();
 
@@ -155,8 +166,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     await processDatabase(bookmarkDb, entry => {
       if (entry.type === 'LINK') {
-        if (entry.url.toLowerCase().includes(formatedUserRequest)) {
-          if (entry.url.toLowerCase() === formatedUserRequest) {
+        if (entry.url.toLowerCase().includes(formatedUserRequestLowerCase)) {
+          if (entry.url.toLowerCase() === formatedUserRequestLowerCase) {
             linksMatchResults.push({
               path: formatPathLink(entry.path),
               title: entry.title,
@@ -201,13 +212,13 @@ document.addEventListener("DOMContentLoaded", function() {
       if (linksMatchResults.length === 0 && linksContainsResults.length === 0) {
         htmlOutput += `
         <div class="indexed-or-not">
-            Link: "<a href="${formatedUserRequest}"><span id="formated-user-request-1"></span></a>" was not indexed in IS database.
+            Link: "<a href="${encodeURI(formatedUserRequestLink)}"><span id="formated-user-request-1"></span></a>" was not indexed in IS database.
         </div>`;
       } else {
         if (linksMatchResults.length > 0) {
           htmlOutput += `
         <div class="indexed-or-not">
-            Link: "<a href="${formatedUserRequest}"><span id="formated-user-request-2"></span></a>" was already indexed in IS database, in location(s):
+            Link: "<a href="${encodeURI(formatedUserRequestLink)}"><span id="formated-user-request-2"></span></a>" was already indexed in IS database, in location(s):
         </div>
         <br>
         <table>
@@ -237,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (linksContainsResults.length > 0) {
           htmlOutput += `
         <div class="indexed-or-not">
-            Link: "<a href="${formatedUserRequest}"><span id="formated-user-request-3"></span></a>" was also found indexed in IS database, in location(s):
+            Link: "<a href="${encodeURI(formatedUserRequestLink)}"><span id="formated-user-request-3"></span></a>" was also found indexed in IS database, in location(s):
         </div>
         <br>
         <table>
@@ -282,8 +293,8 @@ document.addEventListener("DOMContentLoaded", function() {
     headers.append("Content-Type", "application/json")
 
     const body = {
-      "link": formatedUserRequest,
-      "html": htmlISbookmarksDynamicContainer.innerHTML
+      "link": formatedUserRequest, // TODO: I can't see it in the email lmfao.. but why? would be nice to investigate that later.
+      "html": htmlISbookmarksDynamicContainer.innerHTML // TODO: inject css in .innerHTML
     }
 
     const requestOptions = {
@@ -433,10 +444,14 @@ function isResponseUp(response) {
   return false;
 }
 
+function stripNewlinesAndWhitespace(str) {
+  return str.replace(/^\s+|\s+$/g, '');
+}
+
 function formatLink(link) {
-  return `<a href="${link}">${link}</a>`;
+  return `<a href="${encodeURI(link)}">${link}</a>`;
 }
 
 function formatPathLink(pathArray) {
-  return `<a href="/Illegal_Services/${pathArray.join('/')}/index.html">${pathArray.join('/')}</a>`;
+  return `<a href="/Illegal_Services/${encodeURI(pathArray.join('/'))}/index.html">${pathArray.join('/')}</a>`;
 }
